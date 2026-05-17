@@ -1,0 +1,61 @@
+# AGENTS.md
+
+Machine-readable context for AI coding assistants (Cursor, Copilot, etc.).  
+Copy to your **application repository root** and customize paths/tags.
+
+## Commands
+
+- Install: `npm install`
+- Dev server: `npx nx serve <app-name>`
+- Lint: `npx nx run-many -t lint`
+- Test: `npx nx run-many -t test`
+- E2E: `npx nx e2e <e2e-project>`
+- Build: `npx nx build <app-name>`
+
+## Repository layout
+
+```text
+apps/<demo-app>/          # Runnable application
+apps/<demo>-e2e/          # Playwright E2E
+libs/ports/               # Framework-free port interfaces ONLY
+libs/adapters-mock/       # Demo/mock implementations
+libs/adapters-<prod>/     # Production implementations (optional)
+libs/shell/               # App shell, layout, global guards
+libs/features-*/          # Domain features (auth, org, billing, …)
+libs/ui/                  # Design system / Spartan helm components
+```
+
+## Architecture rules (ports & adapters)
+
+1. **NEVER** import adapter libraries from `libs/features-*` or `libs/ui`.
+2. Features inject ports via `InjectionToken` (e.g. `ORG_PORT`, `AUTH_PORT`, `BILLING_PORT`).
+3. Swap mock vs production adapters only in `app.config.ts` (or `provide*Adapters()`).
+4. `libs/ports` must not import `@angular/*` or `rxjs`.
+
+## Nx tags (customize to match eslint depConstraints)
+
+| Tag | May import |
+|-----|------------|
+| `type:port` | `type:util` only |
+| `type:adapter` | `type:port` |
+| `type:feature` | `type:port`, `type:ui`, `type:shell` |
+| `type:ui` | `type:util` |
+
+## Angular conventions
+
+- Standalone components only (no new NgModules).
+- Use `input()`, `output()`, `computed()` — avoid new `@Input` / `@Output`.
+- Use `@if`, `@for`, `@switch` — avoid new `*ngIf` / `*ngFor`.
+- Prefer `resource()` loaders calling port methods — avoid `subscribe()` in templates.
+- Functional guards (`canActivateFn`) with `inject()`.
+
+## Quality
+
+- Rubric: [Quality Framework v1.0](https://github.com/oequ/quality-framework)
+- Self-assessment: `docs/QUALITY.md` in this repo
+
+## Do not
+
+- Put Supabase/Firebase/Stripe SDKs in feature components.
+- Use `bypassSecurityTrustHtml` without security review.
+- Treat route guards as authorization (backend enforces access).

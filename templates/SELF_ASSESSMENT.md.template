@@ -1,0 +1,83 @@
+# Quality self-assessment
+
+Assessment of **this repository** against [Quality Framework v1.0](https://github.com/oequ/quality-framework).
+
+| Field | Value |
+|-------|--------|
+| **Project** | YOUR_PROJECT_NAME |
+| **Rubric version** | Quality Framework v1.0 |
+| **Assessment date** | YYYY-MM-DD |
+| **Assessed by** | team / handle |
+| **Total score** | ___ / 1000 |
+| **Maturity level** | L1 / L2 / L3 (self-assessed) |
+
+## Summary
+
+Short narrative: strengths, known gaps, demo vs production caveats.
+
+## Category scores
+
+| Category | Max | Earned | % |
+|----------|-----|--------|---|
+| Architecture & boundaries | 200 | | |
+| Security & privacy | 200 | | |
+| Angular platform | 150 | | |
+| SaaS domain | 150 | | |
+| Testing & CI | 100 | | |
+| UX & design system | 100 | | |
+| Performance & a11y | 50 | | |
+| Documentation & OSS | 50 | | |
+
+Scoring method: [docs/scoring.md](https://github.com/oequ/quality-framework/blob/main/docs/scoring.md)
+
+## Must criteria — Architecture, Security, Angular
+
+| ID | Pass | Partial | Fail | N/A | Evidence |
+|----|------|---------|------|-----|----------|
+| A1 | | | | | |
+| A2 | | | | | |
+| A3 | | | | | |
+| … | | | | | |
+| S1 | | | | | |
+| … | | | | | |
+| NG3 | | | | | |
+| … | | | | | |
+
+Full rubric: [docs/rubric](https://github.com/oequ/quality-framework/tree/main/docs/rubric)
+
+## SaaS domain highlights
+
+| ID | Status | Notes |
+|----|--------|-------|
+| SaaS1 | | |
+| SaaS3 | | |
+| SaaS6 | | |
+
+## Demo vs production
+
+| Topic | Demo behavior | Production target |
+|-------|---------------|-------------------|
+| Auth tokens | e.g. sessionStorage | HttpOnly cookies / BFF |
+| CSP | relaxed / none | strict CSP |
+| Adapters | mock only | production adapter wired |
+
+## CI evidence
+
+- Lint: LINK_OR_STATUS
+- Test: LINK_OR_STATUS
+- E2E: LINK_OR_STATUS
+- Build: LINK_OR_STATUS
+
+## Badge
+
+If publishing a README badge, use only the level supported by this document:
+
+```markdown
+[![Quality Framework: L1 Starter-ready](https://img.shields.io/badge/Quality_Framework-L1_Starter--ready-0ea5e9)](https://github.com/oequ/quality-framework)
+```
+
+## Next actions
+
+1. 
+2. 
+3. 

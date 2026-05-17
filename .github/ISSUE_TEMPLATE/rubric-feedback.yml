@@ -1,0 +1,52 @@
+name: Rubric feedback
+description: Propose a change to Quality Framework criteria or levels
+title: "[Rubric] "
+labels:
+  - rubric
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve [Quality Framework](https://github.com/oequ/quality-framework).
+        See [CONTRIBUTING.md](../../CONTRIBUTING.md) for versioning rules.
+
+  - type: input
+    id: criterion-id
+    attributes:
+      label: Criterion ID
+      description: e.g. A2, NG5, SaaS6 — or "new"
+      placeholder: A2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: Change type
+      options:
+        - Clarification (no level change)
+        - Level change (Must / Should / Could)
+        - New criterion
+        - Deprecate criterion
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change and why it matters for Angular B2B SaaS in 2025–2026
+    validations:
+      required: true
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification method
+      description: How can teams objectively check pass/fail?
+
+  - type: input
+    id: sources
+    attributes:
+      label: Sources (optional)
+      description: Links to official docs, blog posts, etc.
