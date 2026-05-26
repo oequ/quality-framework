@@ -19,7 +19,6 @@ Deep-research outputs used to evolve Quality Framework **v1.1** (May 2026). Raw 
 
 ## Prompt templates
 
-Reusable Gemini Deep Research prompts live in the reference implementation:  
-[oequ/angular-saas-starter-ui — docs/gemini-deep-research](https://github.com/oequ/angular-saas-starter-ui/tree/main/docs/gemini-deep-research).
+Reusable Gemini Deep Research prompts: [prompts/](./prompts/README.md) (one file per rubric domain + synthesis).
 
 [← Documentation index](../README.md)

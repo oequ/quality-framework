@@ -48,7 +48,7 @@ Major release (2.0) — reweight categories or break scoring
 
 ### Research → rubric pipeline
 
-1. Run structured prompt (see [saas-starter `docs/gemini-deep-research`](https://github.com/oequ/angular-saas-starter-ui/tree/main/docs/gemini-deep-research) for templates).
+1. Run structured prompt from [docs/research/prompts/](./research/prompts/README.md).
 2. Store raw report in `docs/research/`.
 3. Extract: **table-stakes 2026**, **L1/L2/L3 mapping**, **proposed v1.x changes**, **anti-patterns**.
 4. Open GitHub issue per proposed change (label `rubric-feedback`).
