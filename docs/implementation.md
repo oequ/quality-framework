@@ -4,14 +4,18 @@ Where to apply top **Must** criteria in a typical Nx + Angular + ports monorepo 
 
 ## 1. Architecture & Nx boundaries
 
-**Where:** Root ESLint config (`eslint.config.mjs` or `.eslintrc.json`).
+**Where:** Root ESLint config (`eslint.config.mjs`).
 
-**Action:** Configure `@nx/enforce-module-boundaries` `depConstraints`, for example:
+**Action:** Configure `@nx/enforce-module-boundaries` with **real** `depConstraints` (no wildcard `*` → `*`). Example layers:
 
-- `type:port` — may import only `type:util` (if any)
-- `type:adapter` / `type:adapter-mock` — may import `type:port`
-- `type:feature` — may import `type:port`, `type:ui`, `type:shell` (as designed); **not** `type:adapter`
-- `type:ui` — presentation only; no adapters or features
+- `type:ports` — leaf; ports only
+- `type:adapters` — may import `type:ports`, `type:adapters`
+- `type:feature` — may import `type:ports`, `type:ui`, `type:shell`, `type:feature`; **not** `type:adapters`
+- `type:app` — may wire adapters in `app.config` only
+
+**A1 (v1.1):** Define ports as **abstract classes** in `libs/ports` (no `@angular/core`). Register `{ provide: OrgPort, useClass: SupabaseOrgAdapter }`.
+
+**Mock/prod:** Use separate `environment.*.ts` or provider files so demo builds never statically import production SDKs.
 
 **Docs:** Mirror rules in root `AGENTS.md` so AI tools do not suggest illegal imports.
 
@@ -37,7 +41,9 @@ readonly members = resource({
 });
 ```
 
-**Zoneless (Should):** When adopting, add `provideZonelessChangeDetection()` and remove `zone.js` from build config.
+**Zoneless (L2 Must):** Add `provideZonelessChangeDetection()` and remove `zone.js` from build config before claiming L2.
+
+**Contract tests (A13/T11):** Shared Vitest suite imported by both `adapters-mock` and `data-access-*` test targets.
 
 ## 3. Security & HTTP
 

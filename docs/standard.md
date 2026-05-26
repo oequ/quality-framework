@@ -1,6 +1,6 @@
 # Quality Framework — Standard overview
 
-**Version 1.0** · Angular B2B SaaS frontends (2025–2026)
+**Version 1.1** · Angular B2B SaaS frontends (2025–2026)
 
 ## Executive summary
 
@@ -43,7 +43,7 @@ This repository (`quality-framework`) holds the **canonical rubric**. Your app r
 
 These themes appear repeatedly across rubric domains. Exact IDs and levels are in [rubric/](./rubric/README.md).
 
-1. **Ports without framework imports** — `libs/ports` uses plain TypeScript; no `@angular/*` or `rxjs` in contracts.
+1. **Framework-free port contracts** — `libs/ports` has no `@angular/*` imports; use **abstract classes** as DI tokens (v1.1). RxJS in port streams is OK if documented.
 2. **Nx boundary enforcement** — Features do not import adapters; only ports (and UI primitives).
 3. **Injection tokens for ports** — Swap mock vs production adapters in `app.config` only.
 4. **Standalone-first Angular** — No new NgModules; signal `input()` / `output()`; built-in control flow.
@@ -58,7 +58,7 @@ These themes appear repeatedly across rubric domains. Exact IDs and levels are i
 
 Some criteria describe **2026 best practice** that teams adopt gradually:
 
-- **Zoneless** (`provideZonelessChangeDetection`, no `zone.js`) — performance win; many codebases still migrate.
+- **Zoneless** (`provideZonelessChangeDetection`, no `zone.js`) — **Must for L2** (v1.1); many L1 starters still migrate.
 - **Full CSP with nonces** — required for L2+ production, often partial in demos.
 - **Route-based tenant IDs** — alternative to active-org context + settings routes; pick one model and document it.
 
@@ -91,6 +91,8 @@ Prefer:
 ## Next steps
 
 - [Maturity levels](./maturity.md)
+- [Framework evolution](./evolution.md)
+- [Research summaries](./research/README.md)
 - [Rubric](./rubric/README.md)
 - [Implementation mapping](./implementation.md)
 - [90-day roadmap](./roadmap.md)

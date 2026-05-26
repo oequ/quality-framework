@@ -45,9 +45,11 @@ Repeat for all categories, then sum.
 | > 600 | L1 Starter-ready |
 | ≤ 600 | Below L1 — publish gaps, do not use badge |
 
-**Additional gates for L1:** 100% of **Must** in Architecture, Security, and Angular—even if total score > 600.
+**Additional gates for L1:** 100% of **Must** in Architecture, Security, and Angular—even if total score > 600. **Partial does not count as Pass** for gates.
 
-**Additional gates for L2:** Documented in [maturity.md](./maturity.md) (E2E, boundaries CI, production adapter, WCAG audit).
+**Additional gates for L2 (v1.1):** Documented in [maturity.md](./maturity.md) — includes zoneless (NG1, NG2), E2E, boundaries CI, production adapter, WCAG audit, A1 v1.1, runtime config path (TS8).
+
+**New criteria in v1.1** (count toward score, not L1 gates unless Must): A13, T11, TS11, NG13.
 
 ## Publishing results
 

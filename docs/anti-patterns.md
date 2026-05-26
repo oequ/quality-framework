@@ -42,6 +42,26 @@ Hiding admin buttons without documenting that **server/RLS/API** must enforce pe
 
 Binding templates to `SupabaseUser`, Stripe types, etc. Map to domain types in adapters first.
 
+## 11. InjectionToken inside `libs/ports` (v1.1)
+
+Importing `InjectionToken` from `@angular/core` in the ports layer. Prefer **abstract classes** as port tokens (see A1).
+
+## 12. Conditional mock + prod adapter in one config
+
+`useClass: isProd ? ProdAdapter : MockAdapter` with **both** adapters statically imported — bundles both SDKs. Use environment file replacement or separate provider files.
+
+## 13. `effect()` for derived UI state
+
+Using `effect()` to sync parent input → local state. Prefer `computed()` or `linkedSignal()` (NG6).
+
+## 14. TypeScript `enum` for roles and status
+
+Runtime enum emit and poor JSON ergonomics. Use string unions and `as const` objects (TS6).
+
+## 15. Build-time-only config for production claims
+
+`environment.prod.ts` file replacement without runtime `config.json` — blocks immutable Docker promote (TS8 L2).
+
 ---
 
 Violations should be caught in code review and, where possible, ESLint/Nx rules. See [rubric/](./rubric/README.md) for positive criteria.

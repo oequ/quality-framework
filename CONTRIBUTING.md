@@ -21,11 +21,12 @@ Thank you for helping improve an open standard for Angular B2B SaaS quality.
    - Must / Should / Could level
    - Verification method (automated vs manual)
    - Why the change matters in 2025–2026
-2. For substantive changes, open a PR updating the relevant `docs/rubric/*.md` file.
+   - Link to research summary in `docs/research/` if applicable
+2. For substantive changes, open a PR updating the relevant `docs/rubric/*.md` file and [docs/evolution.md](./docs/evolution.md) if governance changes.
 3. Bump [CHANGELOG.md](./CHANGELOG.md):
    - **Patch** — clarifications, typos, examples
-   - **Minor** — new Should/Could criteria, new domains
-   - **Major** — renaming IDs, changing Must → Should, scoring weights
+   - **Minor** — new criteria (new IDs), L2 gate clarifications, criterion redefinitions (e.g. A1 v1.1)
+   - **Major** — renaming IDs, changing category weights, removing criteria
 
 ## Editorial rules
 

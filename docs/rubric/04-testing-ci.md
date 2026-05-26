@@ -14,5 +14,6 @@ Verification pyramid, pipeline hygiene, and supply-chain basics.
 | **T8** | **Coverage thresholds.** Meaningful coverage on ports/adapters/mappers (e.g. >80%). | Should | Vitest coverage | UI coverage optional. |
 | **T9** | **Lighthouse CI.** CWV and a11y budgets on demo deploy. | Could | CI | Proves performance/a11y investment. |
 | **T10** | **Parallel CI jobs.** Lint, test, build, e2e as separate parallel steps. | Must | CI config | Faster feedback on PRs. |
+| **T11** | **Adapter contract tests.** Same behavioral tests executed against mock and production adapters (see A13). | Should | CI | Fast lane on mock; integration lane on real backend or container. |
 
 [← Rubric index](./README.md)

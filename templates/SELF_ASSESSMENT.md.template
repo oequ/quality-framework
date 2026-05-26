@@ -1,19 +1,22 @@
 # Quality self-assessment
 
-Assessment of **this repository** against [Quality Framework v1.0](https://github.com/oequ/quality-framework).
+Assessment of **this repository** against [Quality Framework v1.1](https://github.com/oequ/quality-framework).
 
 | Field | Value |
 |-------|--------|
 | **Project** | YOUR_PROJECT_NAME |
-| **Rubric version** | Quality Framework v1.0 |
+| **Rubric version** | Quality Framework v1.1 |
 | **Assessment date** | YYYY-MM-DD |
 | **Assessed by** | team / handle |
 | **Total score** | ___ / 1000 |
 | **Maturity level** | L1 / L2 / L3 (self-assessed) |
+| **Must gates** | Architecture / Security / Angular — all Must = Pass for L1 badge |
 
 ## Summary
 
 Short narrative: strengths, known gaps, demo vs production caveats.
+
+**v1.1 note:** A1 allows abstract-class ports (no `@angular/core` in `libs/ports`). L2 requires NG1+NG2 Pass (zoneless). See [maturity gates](https://github.com/oequ/quality-framework/blob/main/docs/maturity.md).
 
 ## Category scores
 
@@ -37,9 +40,12 @@ Scoring method: [docs/scoring.md](https://github.com/oequ/quality-framework/blob
 | A1 | | | | | |
 | A2 | | | | | |
 | A3 | | | | | |
+| A13 | | | | | |
 | … | | | | | |
 | S1 | | | | | |
 | … | | | | | |
+| NG1 | | | | | |
+| NG2 | | | | | |
 | NG3 | | | | | |
 | … | | | | | |
 
