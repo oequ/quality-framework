@@ -2,7 +2,13 @@
 
 Deep-research outputs used to evolve Quality Framework. Raw `.txt` exports are gitignored; start with **summaries** for rubric impact.
 
-## Reports
+## Synthesis (start here for big picture)
+
+| Report | Summary |
+|--------|---------|
+| Cross-domain 2026 expectations | [00-synthesis-2026-summary.md](./00-synthesis-2026-summary.md) |
+
+## Domain reports
 
 | Report | Raw file | Summary | Rubric impact |
 |--------|----------|---------|---------------|
