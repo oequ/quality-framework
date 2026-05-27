@@ -46,4 +46,4 @@ Many criteria include a **Ports note**—how the rule applies when using hexagon
 
 ## Versioning
 
-This rubric is **Quality Framework v1.3**. Criterion IDs are stable; clarifications and new IDs ship in minor releases (see [evolution.md](../evolution.md) and [CONTRIBUTING.md](../../CONTRIBUTING.md)).
+This rubric is **Quality Framework v1.4** (criterion set frozen at v1.3; v1.4 adds adopter docs only). Criterion IDs are stable; clarifications and new IDs ship in minor releases (see [evolution.md](../evolution.md) and [CONTRIBUTING.md](../../CONTRIBUTING.md)).

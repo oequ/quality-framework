@@ -24,7 +24,7 @@ Copy-paste prompts for [Gemini Deep Research](https://gemini.google.com/) to val
 | [07-ux-and-design-system.md](./07-ux-and-design-system.md) | Loading/empty/error, Tailwind v4 | U1–U10 | 10% |
 | [08-documentation-and-oss.md](./08-documentation-and-oss.md) | AGENTS.md, ADRs, Scorecard | D1–D8 | 5% |
 | [09-saas-domain-b2b.md](./09-saas-domain-b2b.md) | Tenancy, billing, RBAC | SaaS1–SaaS7 | 15% |
-| [00-synthesis-2026-expectations.md](./00-synthesis-2026-expectations.md) | Cross-domain synthesis | All | — |
+| [00-synthesis-2026-expectations.md](./00-synthesis-2026-expectations.md) | Cross-domain synthesis (run after 01–09) | All | — |
 
 ## Recommended order
 

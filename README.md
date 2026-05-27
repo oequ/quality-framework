@@ -2,7 +2,7 @@
 
 An open quality standard for **Angular B2B SaaS** frontends (2025–2026): rubric, maturity levels, and adoption guides—not a flat checklist.
 
-**Version:** 1.3.0 (see [CHANGELOG.md](./CHANGELOG.md))
+**Version:** 1.4.0 (see [CHANGELOG.md](./CHANGELOG.md))
 
 ## What this is
 
@@ -31,7 +31,8 @@ Static Markdown checkboxes are easy to tick without matching reality. Quality Fr
 1. Read [docs/standard.md](./docs/standard.md) (10 min).
 2. Copy [templates/SELF_ASSESSMENT.md.template](./templates/SELF_ASSESSMENT.md.template) into your app repo as `docs/QUALITY.md`.
 3. Score against [docs/rubric/](./docs/rubric/README.md).
-4. Publish your level honestly (see [Maturity badges](#maturity-badges)).
+4. Verify [L2 gates](./docs/l2-gates.md) before claiming Production-ready.
+5. Publish your level honestly (see [Maturity badges](#maturity-badges)).
 
 ## Documentation
 
@@ -40,10 +41,13 @@ Static Markdown checkboxes are easy to tick without matching reality. Quality Fr
 | [docs/README.md](./docs/README.md) | Index |
 | [docs/standard.md](./docs/standard.md) | Standard overview & non-negotiables |
 | [docs/maturity.md](./docs/maturity.md) | L1 / L2 / L3 thresholds |
+| [docs/l2-gates.md](./docs/l2-gates.md) | L2 gate checklist (16 items) |
+| [docs/migration/v1.0-to-v1.3.md](./docs/migration/v1.0-to-v1.3.md) | Upgrade from v1.0 assessments |
+| [docs/procurement-appendix.md](./docs/procurement-appendix.md) | Buyer mapping (informative) |
 | [docs/scoring.md](./docs/scoring.md) | How to calculate the 0–1000 score |
 | [docs/implementation.md](./docs/implementation.md) | Where to implement in an Nx monorepo |
 | [docs/roadmap.md](./docs/roadmap.md) | 90-day adoption plan |
-| [docs/evolution.md](./docs/evolution.md) | How the framework evolves (v1.2+) |
+| [docs/evolution.md](./docs/evolution.md) | How the framework evolves (v1.4+) |
 | [docs/research/](./docs/research/) | Deep research reports & summaries |
 | [docs/anti-patterns.md](./docs/anti-patterns.md) | Legacy practices to avoid |
 | [docs/bibliography.md](./docs/bibliography.md) | Sources |
@@ -65,7 +69,7 @@ Optional README badge (replace level when you publish a self-assessment):
 [![Quality Framework: L1 Starter-ready](https://img.shields.io/badge/Quality_Framework-L1_Starter--ready-0ea5e9)](https://github.com/oequ/quality-framework#maturity-levels)
 ```
 
-Only claim **L2** or **L3** after meeting the thresholds in [docs/maturity.md](./docs/maturity.md) and documenting evidence.
+Only claim **L2** or **L3** after meeting [docs/l2-gates.md](./docs/l2-gates.md) and [docs/maturity.md](./docs/maturity.md), with evidence in `docs/QUALITY.md`.
 
 ## Contributing
 

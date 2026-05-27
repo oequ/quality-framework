@@ -1,11 +1,11 @@
 # Quality self-assessment
 
-Assessment of **this repository** against [Quality Framework v1.3](https://github.com/oequ/quality-framework).
+Assessment of **this repository** against [Quality Framework v1.4](https://github.com/oequ/quality-framework).
 
 | Field | Value |
 |-------|--------|
 | **Project** | YOUR_PROJECT_NAME |
-| **Rubric version** | Quality Framework v1.3 |
+| **Rubric version** | Quality Framework v1.4 |
 | **Assessment date** | YYYY-MM-DD |
 | **Assessed by** | team / handle |
 | **Total score** | ___ / 1000 |
@@ -16,7 +16,7 @@ Assessment of **this repository** against [Quality Framework v1.3](https://githu
 
 Short narrative: strengths, known gaps, demo vs production caveats.
 
-**v1.3 note:** L2 adds SaaS5 (onboarding), U4+U11 (skeletons, dark mode), D3+D6+D10 (Scorecard ≥6.5, CODEOWNERS, QUALITY.md). Prior gates: zoneless, security path, axe CI, mock E2E, T8. See [maturity gates](https://github.com/oequ/quality-framework/blob/main/docs/maturity.md).
+**v1.4 note:** L2 requires all [16 gates](https://github.com/oequ/quality-framework/blob/main/docs/l2-gates.md) (zoneless, security path, axe CI, onboarding, dark mode, Scorecard, QUALITY.md, etc.). See [l2-gates.md](https://github.com/oequ/quality-framework/blob/main/docs/l2-gates.md).
 
 ## Category scores
 

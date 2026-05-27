@@ -4,6 +4,27 @@ All notable changes to Quality Framework documentation are documented here.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.4.0] - 2026-05-27
+
+### Added
+
+- [docs/research/00-synthesis-2026-summary.md](./docs/research/00-synthesis-2026-summary.md) — cross-domain synthesis of nine research reports
+- [docs/l2-gates.md](./docs/l2-gates.md) — full L2 gate checklist with evidence examples
+- [docs/migration/v1.0-to-v1.3.md](./docs/migration/v1.0-to-v1.3.md) — rubric upgrade guide
+- [docs/procurement-appendix.md](./docs/procurement-appendix.md) — informative buyer mapping (ASVS, VPAT, Scorecard)
+- [docs/rfc/README.md](./docs/rfc/README.md) — v2.0 candidate RFC index
+
+### Changed
+
+- Updated [00-synthesis prompt](./docs/research/prompts/00-synthesis-2026-expectations.md) for v1.3 baseline
+- [docs/maturity.md](./docs/maturity.md) — normalized formatting; links to l2-gates
+- [docs/evolution.md](./docs/evolution.md) — synthesis complete; maintenance mode
+
+### Notes
+
+- **No new rubric criterion IDs** in v1.4 — documentation and synthesis only
+- Research program closed until v2.0 RFC approval
+
 ## [1.3.0] - 2026-05-27
 
 ### Added
@@ -102,6 +123,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Zoneless criteria (NG1, NG2) published as **Should** to reflect common migration state
 - Tenant routing (SaaS2) allows active-org model as alternative to `/org/:id` routes
 
+[1.4.0]: https://github.com/oequ/quality-framework/releases/tag/v1.4.0
 [1.3.0]: https://github.com/oequ/quality-framework/releases/tag/v1.3.0
 [1.2.0]: https://github.com/oequ/quality-framework/releases/tag/v1.2.0
 [1.1.0]: https://github.com/oequ/quality-framework/releases/tag/v1.1.0

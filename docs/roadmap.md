@@ -1,12 +1,12 @@
 # 90-day adoption roadmap
 
-Phased plan to move an Angular B2B SaaS monorepo toward **L2 Production-ready** using Quality Framework v1.2.
+Phased plan to move an Angular B2B SaaS monorepo toward **L2 Production-ready** using Quality Framework v1.4.
 
 ## Phase 1 — Weeks 1–4 (boundaries & AI readiness)
 
 | Week | Focus | Deliverables |
 |------|--------|--------------|
-| 1 | Documentation | Root `AGENTS.md`; `docs/QUALITY.md` self-assessment; pin quality-framework **v1.2** |
+| 1 | Documentation | Root `AGENTS.md`; `docs/QUALITY.md`; pin **v1.4**; read [l2-gates.md](./l2-gates.md) |
 | 2 | Static analysis | ESLint flat config; real `depConstraints`; CI lint on every PR |
 | 3 | Ports (A1) | Abstract-class ports; no `@angular/core` in `libs/ports` |
 | 4 | Angular modernization | Signal I/O, `@if`/`@for`; `toSignal`; `resource()` for async data |

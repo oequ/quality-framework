@@ -6,9 +6,13 @@
 |----------|-------------|
 | [standard.md](./standard.md) | What Quality Framework is; hybrid model; non-negotiables |
 | [maturity.md](./maturity.md) | L1 / L2 / L3 levels and category weights |
+| [l2-gates.md](./l2-gates.md) | L2 Production-ready gate checklist |
 | [scoring.md](./scoring.md) | How to calculate the 0–1000 score |
-| [evolution.md](./evolution.md) | Framework evolution and research program (v1.3+) |
+| [evolution.md](./evolution.md) | Framework evolution (v1.4+) |
 | [research/](./research/) | Deep research reports and summaries |
+| [migration/v1.0-to-v1.3.md](./migration/v1.0-to-v1.3.md) | Upgrade guide from v1.0 |
+| [procurement-appendix.md](./procurement-appendix.md) | Buyer mapping (informative) |
+| [rfc/README.md](./rfc/README.md) | v2.0 RFC candidates |
 
 ## Rubric (criteria)
 

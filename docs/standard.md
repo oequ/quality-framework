@@ -1,6 +1,6 @@
 # Quality Framework — Standard overview
 
-**Version 1.3** · Angular B2B SaaS frontends (2025–2026)
+**Version 1.4** · Angular B2B SaaS frontends (2025–2026)
 
 ## Executive summary
 
@@ -93,8 +93,9 @@ Prefer:
 ## Next steps
 
 - [Maturity levels](./maturity.md)
+- [L2 gate checklist](./l2-gates.md)
 - [Framework evolution](./evolution.md)
-- [Research summaries](./research/README.md)
+- [Research synthesis](./research/00-synthesis-2026-summary.md)
 - [Rubric](./rubric/README.md)
 - [Implementation mapping](./implementation.md)
 - [90-day roadmap](./roadmap.md)

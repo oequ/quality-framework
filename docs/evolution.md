@@ -1,4 +1,4 @@
-# Framework evolution (v1.0 → v1.3+)
+# Framework evolution (v1.0 → v1.4+)
 
 How Quality Framework stays current, how we use research, and how maintainers should change the rubric without checklist washing.
 
@@ -10,7 +10,7 @@ Quality Framework is a **living standard**, not a frozen PDF. It evolves when:
 2. **Buyer expectations shift** (B2B SaaS procurement, EU accessibility law, supply-chain audits).
 3. **Evidence accumulates** (deep research, production post-mortems, reference implementations).
 
-Versions **1.1–1.3** (May 2026) incorporate deep research across all nine rubric domains — see [research/](./research/README.md). v1.3 completes SaaS, UX, and Documentation & OSS.
+Versions **1.1–1.3** (May 2026) incorporated deep research across all nine rubric domains. **v1.4** closes the research loop with [synthesis](./research/00-synthesis-2026-summary.md) and adopter docs ([l2-gates.md](./l2-gates.md), [migration](./migration/v1.0-to-v1.3.md), [procurement appendix](./procurement-appendix.md)).
 
 ## Governance model
 
@@ -54,21 +54,31 @@ Major release (2.0) — reweight categories or break scoring
 4. Open GitHub issue per proposed change (label `rubric-feedback`).
 5. Merge doc changes + CHANGELOG in minor release.
 
-### Remaining domains (planned research)
+### Research status (May 2026)
 
-| Domain | Status (May 2026) |
-|--------|-------------------|
-| Architecture | Done — [summary](./research/01-architecture-summary.md) |
-| Angular | Done — [summary](./research/02-angular-summary.md) |
-| TypeScript | Done — [summary](./research/03-typescript-summary.md) |
-| Security | Done — [summary](./research/05-security-summary.md) |
-| Testing & CI | Done — [summary](./research/04-testing-ci-summary.md) |
-| Performance & a11y | Done — [summary](./research/06-performance-a11y-summary.md) |
-| SaaS domain | Done — [summary](./research/09-saas-domain-summary.md) |
-| UX & design system | Done — [summary](./research/07-ux-design-system-summary.md) |
-| Documentation & OSS | Done — [summary](./research/08-documentation-oss-summary.md) |
+| Domain | Status |
+|--------|--------|
+| Architecture | [01 summary](./research/01-architecture-summary.md) |
+| Angular | [02 summary](./research/02-angular-summary.md) |
+| TypeScript | [03 summary](./research/03-typescript-summary.md) |
+| Testing & CI | [04 summary](./research/04-testing-ci-summary.md) |
+| Security | [05 summary](./research/05-security-summary.md) |
+| Performance & a11y | [06 summary](./research/06-performance-a11y-summary.md) |
+| UX & design system | [07 summary](./research/07-ux-design-system-summary.md) |
+| Documentation & OSS | [08 summary](./research/08-documentation-oss-summary.md) |
+| SaaS domain | [09 summary](./research/09-saas-domain-summary.md) |
+| **Synthesis** | [00 summary](./research/00-synthesis-2026-summary.md) |
 
-Next: **synthesis** pass (`00-synthesis` prompt) and v2.0 scoping (weights, optional FSD tags).
+**Research program:** maintenance mode. New domain research only via approved [RFC](./rfc/README.md) or major community demand. Routine changes: GitHub issues (`rubric-feedback`), patch/minor doc fixes.
+
+## v1.4 changes (summary)
+
+- **[00-synthesis-2026-summary.md](./research/00-synthesis-2026-summary.md)** — buyer matrix, heat map, v1.3 gap analysis, v2.0 candidates.
+- **[l2-gates.md](./l2-gates.md)** — 16-gate checklist; core vs full L2 narrative.
+- **[migration/v1.0-to-v1.3.md](./migration/v1.0-to-v1.3.md)** — ID and gate changelog for adopters.
+- **[procurement-appendix.md](./procurement-appendix.md)** — informative ASVS/VPAT/Scorecard mapping.
+- **[rfc/README.md](./rfc/README.md)** — v2.0 RFC index.
+- **No new rubric criterion IDs.**
 
 ## v1.1 changes (summary)
 
@@ -141,21 +151,14 @@ Next: **synthesis** pass (`00-synthesis` prompt) and v2.0 scoping (weights, opti
 
 ## How adopters should upgrade
 
-1. Pin rubric version in `docs/QUALITY.md`: `Quality Framework v1.3`.
-2. Re-score **SaaS domain**, **UX**, and **Documentation** (new IDs and L2 gates).
-3. Update demo vs production table (S1, S5, P1, T1).
-4. Do not claim **L2** until new gates pass — score alone is insufficient.
+1. Pin rubric version in `docs/QUALITY.md`: `Quality Framework v1.4`.
+2. Use [l2-gates.md](./l2-gates.md) before claiming **L2**.
+3. If migrating from v1.0 assessments, read [migration/v1.0-to-v1.3.md](./migration/v1.0-to-v1.3.md).
+4. Do not claim **L2** until all gates Pass — score alone is insufficient.
 
-## Long-term directions (v2.0 candidates)
+## Long-term directions (v2.0)
 
-Not committed; track via issues:
-
-| Theme | Rationale |
-|-------|-----------|
-| **FSD layer tags** | Optional Nx `type:entity`, `type:widget` constraints |
-| **S1a / S1b split** | Separate criterion IDs for demo vs production CSP if tier notes prove insufficient |
-| **Buyer persona appendix** | Procurement checklist (VPAT, SBOM, ASVS mapping) |
-| **Scoring weight review** | Security or a11y weight may rise with buyer evidence |
+Track in [rfc/README.md](./rfc/README.md). Themes include category weight review, S1a/S1b split, SaaS2 L2 gate, core L2 badge, FSD tags, normative procurement kit.
 
 ## Contributing rubric changes
 
