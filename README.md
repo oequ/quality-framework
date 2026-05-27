@@ -2,7 +2,7 @@
 
 An open quality standard for **Angular B2B SaaS** frontends (2025–2026): rubric, maturity levels, and adoption guides—not a flat checklist.
 
-**Version:** 1.2.0 (see [CHANGELOG.md](./CHANGELOG.md))
+**Version:** 1.3.0 (see [CHANGELOG.md](./CHANGELOG.md))
 
 ## What this is
 

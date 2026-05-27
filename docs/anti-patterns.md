@@ -86,6 +86,22 @@ Claiming L2 with meta-tag CSP, JWT in `localStorage`, and no cookie/BFF migratio
 
 Removing a focused element via `@if` without restoring focus — disorients keyboard users. Use `effect()` or explicit focus restore (P4, P11).
 
+## 22. Blank dashboard after signup
+
+New users land on empty shell with no onboarding — fails SaaS5 and PLG activation. Route to create-org / checklist flow.
+
+## 23. Auto-generated AGENTS.md
+
+LLM-generated agent configs without human curation — higher token cost and lower task success than curated AGENTS.md (D1).
+
+## 24. Public security issues
+
+Filing vulnerability reports as public GitHub issues — use SECURITY.md private disclosure (D4).
+
+## 25. Perpetual 0.x semver
+
+Staying on `0.x.y` for years signals instability to enterprise buyers — ship 1.0.0 when install path is stable (D5).
+
 ---
 
 Violations should be caught in code review and, where possible, ESLint/Nx rules. See [rubric/](./rubric/README.md) for positive criteria.

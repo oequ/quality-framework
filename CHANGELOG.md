@@ -4,6 +4,28 @@ All notable changes to Quality Framework documentation are documented here.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.3.0] - 2026-05-27
+
+### Added
+
+- Research summaries: [SaaS domain](./docs/research/09-saas-domain-summary.md), [UX](./docs/research/07-ux-design-system-summary.md), [Documentation & OSS](./docs/research/08-documentation-oss-summary.md)
+- **SaaS8–SaaS12** — audit log, API keys, metering, SSO, export/deletion
+- **U11–U13** — dark mode, i18n, optimistic UI
+- **D9–D10** — README credibility, published QUALITY.md self-assessment
+- L2 gates: **SaaS5**, **U4**, **U11**, **D3** (Scorecard ≥ 6.5), **D6**, **D10**
+
+### Changed
+
+- **SaaS5** — promoted from Should to **Must**
+- **SaaS2, SaaS6** — tenant routing tiers, token invites with seat reservation
+- **D1, D3** — AGENTS.md schema; Scorecard Should with L2 score threshold
+- [docs/maturity.md](./docs/maturity.md), [docs/implementation.md](./docs/implementation.md) — v1.3 guidance
+
+### Notes
+
+- All nine rubric domains now have research summaries; run synthesis before v2.0
+- Re-score SaaS, UX, and Documentation when upgrading from v1.2
+
 ## [1.2.0] - 2026-05-27
 
 ### Added
@@ -80,6 +102,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Zoneless criteria (NG1, NG2) published as **Should** to reflect common migration state
 - Tenant routing (SaaS2) allows active-org model as alternative to `/org/:id` routes
 
+[1.3.0]: https://github.com/oequ/quality-framework/releases/tag/v1.3.0
 [1.2.0]: https://github.com/oequ/quality-framework/releases/tag/v1.2.0
 [1.1.0]: https://github.com/oequ/quality-framework/releases/tag/v1.1.0
 [1.0.0]: https://github.com/oequ/quality-framework/releases/tag/v1.0.0

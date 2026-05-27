@@ -1,6 +1,6 @@
 # Quality Framework — Standard overview
 
-**Version 1.2** · Angular B2B SaaS frontends (2025–2026)
+**Version 1.3** · Angular B2B SaaS frontends (2025–2026)
 
 ## Executive summary
 

@@ -134,16 +134,28 @@ readonly members = resource({
 
 Optional: OpenSSF Scorecard, Lighthouse CI on public deploy, nightly `@web` E2E against staging (L3).
 
-## 8. SaaS features
+## 8. SaaS features (v1.3)
 
 | Feature | Port | Typical UI location |
 |---------|------|---------------------|
-| Org switcher | `OrgPort` | `libs/shell` |
-| Members | `OrgPort` | `libs/features-org` |
-| Billing | `BillingPort` | `libs/features-org` |
+| Org switcher | `OrgPort` | `libs/shell` — invalidate caches on switch |
+| Onboarding | `OrgPort` / `AuthPort` | `libs/features-org` — no blank dashboard (SaaS5) |
+| Members | `OrgPort` | Invite tokens, seat reservation at invite time (SaaS6) |
+| Billing | `BillingPort` | Checkout, portal, past_due banners (SaaS3–SaaS4) |
 | Auth | `AuthPort` | `libs/features-auth` |
 
 Swap `provideDemoAdapters()` vs production providers only in `app.config.ts`.
+
+**Tenancy (SaaS2):** Document active-org vs `/org/:id` in README; L2 prefers route-scoped org with guards.
+
+**Compliance (SaaS12):** Wire export/delete flows to backend; document L1 support-email fallback in QUALITY.md if not automated.
+
+## 9. Documentation & README (v1.3)
+
+- **AGENTS.md:** commands, Nx tags, forbidden adapter imports, permission boundaries (D1).
+- **README:** live demo link, stack matrix, honest limitations, Scorecard badge (D9).
+- **docs/QUALITY.md:** published self-assessment with evidence links (D10).
+- **docs/adr/:** minimum ADRs for ports, auth, billing (D2).
 
 ## Related
 

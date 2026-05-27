@@ -47,9 +47,9 @@ Repeat for all categories, then sum.
 
 **Additional gates for L1:** 100% of **Must** in Architecture, Security, and Angular—even if total score > 600. **Partial does not count as Pass** for gates.
 
-**Additional gates for L2 (v1.2):** Documented in [maturity.md](./maturity.md) — includes v1.1 gates (zoneless, A1, TS8) plus **S1, S2, S5**, **P1 axe CI, P11**, **T1** mock E2E depth, **T8** port coverage.
+**Additional gates for L2 (v1.3):** Documented in [maturity.md](./maturity.md) — v1.2 gates plus **SaaS5**, **U4**, **U11**, **D3** (Scorecard ≥ 6.5), **D6**, **D10**.
 
-**New criteria in v1.2** (count toward score): S11, P11, T12–T14. v1.1 IDs unchanged: A13, T11, TS11, NG13.
+**New criteria in v1.3** (count toward score): SaaS8–SaaS12, U11–U13, D9–D10.
 
 ## Publishing results
 
@@ -69,6 +69,6 @@ In your repo’s `docs/QUALITY.md` (from template):
 
 - Do not count **Partial** as Pass for badge eligibility.
 - Mark demo-only auth/storage as **Fail** for production Must security criteria, with note “demo exception.”
-- Pin rubric version when you assess; re-run when v1.2 ships.
+- Pin rubric version when you assess; re-run when v1.3 ships.
 
 [← Maturity model](./maturity.md)

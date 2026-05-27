@@ -1,4 +1,4 @@
-# Framework evolution (v1.0 → v1.2+)
+# Framework evolution (v1.0 → v1.3+)
 
 How Quality Framework stays current, how we use research, and how maintainers should change the rubric without checklist washing.
 
@@ -10,7 +10,7 @@ Quality Framework is a **living standard**, not a frozen PDF. It evolves when:
 2. **Buyer expectations shift** (B2B SaaS procurement, EU accessibility law, supply-chain audits).
 3. **Evidence accumulates** (deep research, production post-mortems, reference implementations).
 
-Version **1.1** (May 2026) incorporated Architecture, Angular, and TypeScript research. Version **1.2** (May 2026) adds Security, Testing & CI, and Performance & accessibility — see [research/](./research/README.md).
+Versions **1.1–1.3** (May 2026) incorporate deep research across all nine rubric domains — see [research/](./research/README.md). v1.3 completes SaaS, UX, and Documentation & OSS.
 
 ## Governance model
 
@@ -64,11 +64,11 @@ Major release (2.0) — reweight categories or break scoring
 | Security | Done — [summary](./research/05-security-summary.md) |
 | Testing & CI | Done — [summary](./research/04-testing-ci-summary.md) |
 | Performance & a11y | Done — [summary](./research/06-performance-a11y-summary.md) |
-| SaaS domain | Planned |
-| UX & design system | Planned |
-| Documentation & OSS | Planned |
+| SaaS domain | Done — [summary](./research/09-saas-domain-summary.md) |
+| UX & design system | Done — [summary](./research/07-ux-design-system-summary.md) |
+| Documentation & OSS | Done — [summary](./research/08-documentation-oss-summary.md) |
 
-Next: **SaaS domain** + **UX** research, then a **synthesis** pass for v1.3 or v2.0 scoping.
+Next: **synthesis** pass (`00-synthesis` prompt) and v2.0 scoping (weights, optional FSD tags).
 
 ## v1.1 changes (summary)
 
@@ -99,6 +99,26 @@ Next: **SaaS domain** + **UX** research, then a **synthesis** pass for v1.3 or v
 - **Partial Pass** rules documented in [maturity.md](./maturity.md) — demo exceptions (localStorage JWT, relaxed CSP) must be labeled; Partial does not count as Pass for L1 Must gates.
 - **Score vs gates:** Total score > 600 does not replace 100% Must in Architecture, Security, Angular for L1 badge.
 
+## v1.3 changes (summary)
+
+### SaaS domain
+
+- **SaaS5 → Must:** Guided onboarding for users without a workspace.
+- **SaaS2 tiers:** Active-org OK for L1; `/org/:id` + guards for L2.
+- **SaaS8–SaaS12 added:** Audit log, API keys, metering, SSO, export/deletion (SaaS12 Must with L1 Partial path).
+
+### UX & design system
+
+- **U11 added (Should):** Dark mode — **L2 gate**.
+- **U12–U13 added (Could):** i18n (Transloco-style), optimistic UI.
+- **U4/U6/U9 clarified:** Skeletons, inline retry, OKLCH tokens.
+
+### Documentation & OSS
+
+- **D9 added (Should):** README credibility (demo, limitations, stack matrix).
+- **D10 added (Should):** Published `docs/QUALITY.md` — **L2 gate**.
+- **D3 elevated:** Scorecard Should; L2 requires score ≥ 6.5.
+
 ## v1.2 changes (summary)
 
 ### Security
@@ -121,8 +141,8 @@ Next: **SaaS domain** + **UX** research, then a **synthesis** pass for v1.3 or v
 
 ## How adopters should upgrade
 
-1. Pin rubric version in `docs/QUALITY.md`: `Quality Framework v1.2`.
-2. Re-score **Security**, **Testing & CI**, and **Performance & accessibility** (new IDs and gates).
+1. Pin rubric version in `docs/QUALITY.md`: `Quality Framework v1.3`.
+2. Re-score **SaaS domain**, **UX**, and **Documentation** (new IDs and L2 gates).
 3. Update demo vs production table (S1, S5, P1, T1).
 4. Do not claim **L2** until new gates pass — score alone is insufficient.
 

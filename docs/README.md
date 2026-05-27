@@ -7,7 +7,7 @@
 | [standard.md](./standard.md) | What Quality Framework is; hybrid model; non-negotiables |
 | [maturity.md](./maturity.md) | L1 / L2 / L3 levels and category weights |
 | [scoring.md](./scoring.md) | How to calculate the 0–1000 score |
-| [evolution.md](./evolution.md) | Framework evolution and research program (v1.2+) |
+| [evolution.md](./evolution.md) | Framework evolution and research program (v1.3+) |
 | [research/](./research/) | Deep research reports and summaries |
 
 ## Rubric (criteria)
@@ -21,9 +21,9 @@
 | [rubric/04-testing-ci.md](./rubric/04-testing-ci.md) | Testing & CI | T1–T14 |
 | [rubric/05-security.md](./rubric/05-security.md) | Security & privacy | S1–S11 |
 | [rubric/06-performance-a11y.md](./rubric/06-performance-a11y.md) | Performance & accessibility | P1–P11 |
-| [rubric/07-ux-design-system.md](./rubric/07-ux-design-system.md) | UX & design system | U1–U10 |
-| [rubric/08-documentation-oss.md](./rubric/08-documentation-oss.md) | Documentation & OSS hygiene | D1–D8 |
-| [rubric/09-saas-domain.md](./rubric/09-saas-domain.md) | SaaS domain | SaaS1–SaaS7 |
+| [rubric/07-ux-design-system.md](./rubric/07-ux-design-system.md) | UX & design system | U1–U13 |
+| [rubric/08-documentation-oss.md](./rubric/08-documentation-oss.md) | Documentation & OSS hygiene | D1–D10 |
+| [rubric/09-saas-domain.md](./rubric/09-saas-domain.md) | SaaS domain | SaaS1–SaaS12 |
 
 ## Adoption
 
