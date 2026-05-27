@@ -62,6 +62,30 @@ Runtime enum emit and poor JSON ergonomics. Use string unions and `as const` obj
 
 `environment.prod.ts` file replacement without runtime `config.json` — blocks immutable Docker promote (TS8 L2).
 
+## 16. E2E-only testing (“ice cream cone”)
+
+Relying on slow Playwright suites for domain rules that belong in port tests. Use the **testing trophy**: ports first, mocked UI second, E2E last (T1, T4).
+
+## 17. `ng-reflect-*` test selectors (Angular 21)
+
+Targeting `[ng-reflect-name]` or similar — removed from DOM in Angular 21. Use stable `data-testid` attributes.
+
+## 18. Shared flaky database in CI
+
+Parallel E2E workers mutating one database without tenant isolation or teardown — causes flaky CI. Use per-worker seeds, RLS, or TRUNCATE hooks (T1).
+
+## 19. Lighthouse as sole admin quality metric
+
+Demanding high Lighthouse scores on authenticated dashboards while ignoring WCAG keyboard flows and INP. Use **axe on primary flows** (P1) and zoneless for responsiveness (NG1/NG2).
+
+## 20. Production security claims on demo auth
+
+Claiming L2 with meta-tag CSP, JWT in `localStorage`, and no cookie/BFF migration path — label demo tier or implement S1/S2/S5 production path.
+
+## 21. Signals `@if` without focus management
+
+Removing a focused element via `@if` without restoring focus — disorients keyboard users. Use `effect()` or explicit focus restore (P4, P11).
+
 ---
 
 Violations should be caught in code review and, where possible, ESLint/Nx rules. See [rubric/](./rubric/README.md) for positive criteria.

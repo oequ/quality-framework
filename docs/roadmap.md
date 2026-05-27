@@ -1,12 +1,12 @@
 # 90-day adoption roadmap
 
-Phased plan to move an Angular B2B SaaS monorepo toward **L2 Production-ready** using Quality Framework v1.1.
+Phased plan to move an Angular B2B SaaS monorepo toward **L2 Production-ready** using Quality Framework v1.2.
 
 ## Phase 1 — Weeks 1–4 (boundaries & AI readiness)
 
 | Week | Focus | Deliverables |
 |------|--------|--------------|
-| 1 | Documentation | Root `AGENTS.md`; `docs/QUALITY.md` self-assessment; pin quality-framework **v1.1** |
+| 1 | Documentation | Root `AGENTS.md`; `docs/QUALITY.md` self-assessment; pin quality-framework **v1.2** |
 | 2 | Static analysis | ESLint flat config; real `depConstraints`; CI lint on every PR |
 | 3 | Ports (A1) | Abstract-class ports; no `@angular/core` in `libs/ports` |
 | 4 | Angular modernization | Signal I/O, `@if`/`@for`; `toSignal`; `resource()` for async data |
@@ -18,8 +18,8 @@ Phased plan to move an Angular B2B SaaS monorepo toward **L2 Production-ready** 
 | 5 | CI/CD | Parallel jobs: lint, test, build; optional Nx remote cache |
 | 6 | E2E | Playwright: auth, workspace switch, billing/members smoke on mock adapters |
 | 7 | Zoneless (L2 gate) | `provideZonelessChangeDetection()`; remove zone.js |
-| 8 | Security | CSP plan for production; CSRF config; document demo auth limitations |
-| 9 | Accessibility | axe in CI or manual audit; fix focus/target size on primary flows |
+| 8 | Security | HTTP CSP + nonces (S1/S2); cookie/BFF path (S5); SAST in CI (S11); document demo tier |
+| 9 | Accessibility | `@axe-core/playwright` on primary flows (P1); P11 scroll-padding; focus/target size |
 
 ## Phase 3 — Weeks 9–12 (community & polish)
 
@@ -34,7 +34,7 @@ Phased plan to move an Angular B2B SaaS monorepo toward **L2 Production-ready** 
 ## Prioritization tips
 
 - **Do first:** A1–A3, A11, T1, D1, D4, SaaS1, SaaS3, SaaS6 — architecture and trust.
-- **Do before claiming L2:** A2, S1, S5 (production path), T6, full E2E, WCAG pass on core flows.
+- **Do before claiming L2:** A2, S1+S2+S5, T6, T8 port coverage, mock-adapter E2E (T1), axe CI (P1+P11), NG1+NG2.
 - **Defer Could items:** T9, D3, P8 until Must/Should are green.
 
 ## Measuring progress

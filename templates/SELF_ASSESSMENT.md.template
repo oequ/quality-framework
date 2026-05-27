@@ -1,11 +1,11 @@
 # Quality self-assessment
 
-Assessment of **this repository** against [Quality Framework v1.1](https://github.com/oequ/quality-framework).
+Assessment of **this repository** against [Quality Framework v1.2](https://github.com/oequ/quality-framework).
 
 | Field | Value |
 |-------|--------|
 | **Project** | YOUR_PROJECT_NAME |
-| **Rubric version** | Quality Framework v1.1 |
+| **Rubric version** | Quality Framework v1.2 |
 | **Assessment date** | YYYY-MM-DD |
 | **Assessed by** | team / handle |
 | **Total score** | ___ / 1000 |
@@ -16,7 +16,7 @@ Assessment of **this repository** against [Quality Framework v1.1](https://githu
 
 Short narrative: strengths, known gaps, demo vs production caveats.
 
-**v1.1 note:** A1 allows abstract-class ports (no `@angular/core` in `libs/ports`). L2 requires NG1+NG2 Pass (zoneless). See [maturity gates](https://github.com/oequ/quality-framework/blob/main/docs/maturity.md).
+**v1.2 note:** L2 gates include NG1+NG2 (zoneless), S1+S2+S5 (production security path), P1 axe CI + P11, T1 mock E2E depth, T8 port coverage. Demo-tier Partial allowed for S5/P1 only when documented. See [maturity gates](https://github.com/oequ/quality-framework/blob/main/docs/maturity.md).
 
 ## Category scores
 
@@ -63,8 +63,10 @@ Full rubric: [docs/rubric](https://github.com/oequ/quality-framework/tree/main/d
 
 | Topic | Demo behavior | Production target |
 |-------|---------------|-------------------|
-| Auth tokens | e.g. sessionStorage | HttpOnly cookies / BFF |
-| CSP | relaxed / none | strict CSP |
+| Auth tokens | e.g. localStorage (demo label) | HttpOnly cookies / BFF (S5) |
+| CSP | meta tag (demo) | HTTP header + nonces (S1, S2) |
+| E2E | mock adapters on PR | staging smoke L3 optional |
+| Accessibility | Partial P1 + roadmap | axe CI on primary flows (P1) |
 | Adapters | mock only | production adapter wired |
 
 ## CI evidence

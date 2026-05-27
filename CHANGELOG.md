@@ -4,6 +4,31 @@ All notable changes to Quality Framework documentation are documented here.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.2.0] - 2026-05-27
+
+### Added
+
+- Research summaries: [Testing & CI](./docs/research/04-testing-ci-summary.md), [Security](./docs/research/05-security-summary.md), [Performance & a11y](./docs/research/06-performance-a11y-summary.md)
+- **T12** — dependency release cooldown (Should)
+- **T13** — ephemeral PR preview environments (Could)
+- **T14** — visual regression on design system (Could)
+- **S11** — SAST security ESLint plugins in CI (Should)
+- **P11** — WCAG 2.4.11 Focus Not Obscured (Must)
+- L2 gates: **S1, S2, S5** (production security path); **P1** (axe CI on primary flows); **P11**; **T1** mock-adapter E2E depth; **T8** ports/adapters coverage
+
+### Changed
+
+- **T1** — L2 mock-adapter E2E on PR; L3 staging smoke with production adapters
+- **S1, S5** — explicit demo-tier vs production-tier notes (aligns with ASVS / research)
+- **P1** — L1 Partial conformance with roadmap; L2 requires automated axe gate
+- **T7, T8, T9** — supply-chain hardening, ports-only coverage, Lighthouse on public surfaces only
+- [docs/maturity.md](./docs/maturity.md), [docs/implementation.md](./docs/implementation.md), [docs/anti-patterns.md](./docs/anti-patterns.md) — v1.2 guidance
+
+### Notes
+
+- **T11** remains adapter contract tests (unchanged from v1.1); raw testing research proposed a different T11 — see [04-testing-ci-summary.md](./docs/research/04-testing-ci-summary.md)
+- Re-score Security, Testing, and Performance categories when upgrading from v1.1
+
 ## [1.1.0] - 2026-05-26
 
 ### Added
@@ -55,5 +80,6 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Zoneless criteria (NG1, NG2) published as **Should** to reflect common migration state
 - Tenant routing (SaaS2) allows active-org model as alternative to `/org/:id` routes
 
+[1.2.0]: https://github.com/oequ/quality-framework/releases/tag/v1.2.0
 [1.1.0]: https://github.com/oequ/quality-framework/releases/tag/v1.1.0
 [1.0.0]: https://github.com/oequ/quality-framework/releases/tag/v1.0.0

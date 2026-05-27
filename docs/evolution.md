@@ -1,4 +1,4 @@
-# Framework evolution (v1.0 → v1.1+)
+# Framework evolution (v1.0 → v1.2+)
 
 How Quality Framework stays current, how we use research, and how maintainers should change the rubric without checklist washing.
 
@@ -10,7 +10,7 @@ Quality Framework is a **living standard**, not a frozen PDF. It evolves when:
 2. **Buyer expectations shift** (B2B SaaS procurement, EU accessibility law, supply-chain audits).
 3. **Evidence accumulates** (deep research, production post-mortems, reference implementations).
 
-Version **1.1** (May 2026) incorporates findings from three Gemini Deep Research reports in [research/](./research/README.md).
+Version **1.1** (May 2026) incorporated Architecture, Angular, and TypeScript research. Version **1.2** (May 2026) adds Security, Testing & CI, and Performance & accessibility — see [research/](./research/README.md).
 
 ## Governance model
 
@@ -30,7 +30,7 @@ Major release (2.0) — reweight categories or break scoring
 | Change type | Version bump | Example |
 |-------------|--------------|---------|
 | Typo, link fix | Patch 1.0.x | Fix broken URL |
-| Clarify criterion, add criterion, L2 gate detail | **Minor 1.1** | Redefine A1 for abstract-class ports |
+| Clarify criterion, add criterion, L2 gate detail | **Minor 1.x** | v1.1: A1 ports; v1.2: S1/S5 tiers, P1 axe CI |
 | Rename ID, remove criterion, change category weights | **Major 2.0** | Merge domains, change 1000-point weights |
 
 **Criterion IDs are stable.** Meaning may be clarified in minor releases (with CHANGELOG). Removing or renaming an ID requires major version and migration notes.
@@ -61,14 +61,14 @@ Major release (2.0) — reweight categories or break scoring
 | Architecture | Done — [summary](./research/01-architecture-summary.md) |
 | Angular | Done — [summary](./research/02-angular-summary.md) |
 | TypeScript | Done — [summary](./research/03-typescript-summary.md) |
-| Security | Planned |
-| Testing & CI | Planned |
+| Security | Done — [summary](./research/05-security-summary.md) |
+| Testing & CI | Done — [summary](./research/04-testing-ci-summary.md) |
+| Performance & a11y | Done — [summary](./research/06-performance-a11y-summary.md) |
 | SaaS domain | Planned |
 | UX & design system | Planned |
-| Performance & a11y | Planned |
 | Documentation & OSS | Planned |
 
-After Security + SaaS research, run a **synthesis** pass and consider **v1.2**.
+Next: **SaaS domain** + **UX** research, then a **synthesis** pass for v1.3 or v2.0 scoping.
 
 ## v1.1 changes (summary)
 
@@ -99,12 +99,32 @@ After Security + SaaS research, run a **synthesis** pass and consider **v1.2**.
 - **Partial Pass** rules documented in [maturity.md](./maturity.md) — demo exceptions (localStorage JWT, relaxed CSP) must be labeled; Partial does not count as Pass for L1 Must gates.
 - **Score vs gates:** Total score > 600 does not replace 100% Must in Architecture, Security, Angular for L1 badge.
 
+## v1.2 changes (summary)
+
+### Security
+
+- **S1 / S5 tier notes:** Demo meta CSP and labeled `localStorage` vs L2 HTTP CSP and cookie/BFF path.
+- **L2 gates:** S1, S2, S5 Pass required for L2 badge.
+- **S11 added (Should):** SAST ESLint plugins in CI.
+
+### Testing & CI
+
+- **T1 tiers:** L2 mock-adapter E2E on PR; L3 staging with production adapters.
+- **T12–T14 added:** Cooldown (Should), PR previews (Could), visual regression (Could).
+- **T8 / T9 clarified:** Coverage on ports/adapters; Lighthouse on marketing, axe on app (P1).
+
+### Performance & accessibility
+
+- **P11 added (Must):** Focus Not Obscured (WCAG 2.4.11).
+- **P1 L2 gate:** `@axe-core/playwright` (or equivalent) on primary flows in CI.
+- **P1 L1 Partial:** Allowed with published remediation roadmap.
+
 ## How adopters should upgrade
 
-1. Pin rubric version in `docs/QUALITY.md`: `Quality Framework v1.1`.
-2. Re-score affected categories (Architecture, Angular, TypeScript, Testing).
-3. Update README badge only if **gates** still pass after redefinition (e.g. A1 may move from Fail → Pass if you adopt abstract-class ports).
-4. Do not inflate scores — document gaps honestly.
+1. Pin rubric version in `docs/QUALITY.md`: `Quality Framework v1.2`.
+2. Re-score **Security**, **Testing & CI**, and **Performance & accessibility** (new IDs and gates).
+3. Update demo vs production table (S1, S5, P1, T1).
+4. Do not claim **L2** until new gates pass — score alone is insufficient.
 
 ## Long-term directions (v2.0 candidates)
 
@@ -112,11 +132,10 @@ Not committed; track via issues:
 
 | Theme | Rationale |
 |-------|-----------|
-| **FSD layer tags** | Research favors Feature-Sliced Design + Nx; optional `type:entity`, `type:widget` constraints |
-| **Security tier matrix** | Separate “demo CSP” vs “production CSP” criteria (S1a/S1b) |
-| **Automated a11y gate** | axe in CI as Should for L2 |
-| **Buyer persona appendix** | Procurement checklist derived from synthesis research |
-| **Scoring weight review** | Security 20% may rise if buyer surveys confirm |
+| **FSD layer tags** | Optional Nx `type:entity`, `type:widget` constraints |
+| **S1a / S1b split** | Separate criterion IDs for demo vs production CSP if tier notes prove insufficient |
+| **Buyer persona appendix** | Procurement checklist (VPAT, SBOM, ASVS mapping) |
+| **Scoring weight review** | Security or a11y weight may rise with buyer evidence |
 
 ## Contributing rubric changes
 

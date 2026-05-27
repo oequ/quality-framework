@@ -51,10 +51,13 @@ readonly members = resource({
 
 **Actions:**
 
-- CSP headers on production deploy; document demo relaxations.
-- Central auth/CSRF interceptor for HTTP adapters.
-- Ban `bypassSecurityTrustHtml` via ESLint.
-- Document in README: **route guards = UX**; API/RLS enforces authZ.
+- **Demo (L1):** Document meta CSP and `localStorage` session as non-production in `docs/QUALITY.md`.
+- **Production (L2):** HTTP `Content-Security-Policy` with nonces (`ngCspNonce` / `CSP_NONCE`); no `unsafe-inline` scripts.
+- Cookie/BFF or `@supabase/ssr` path — not raw JWT in `localStorage` (S5).
+- Central auth interceptor with **single-flight** refresh on 401 (S7); CSRF when using cookies (S6).
+- Ban unreviewed `bypassSecurityTrustHtml`; DOMPurify for rich HTML (S3).
+- ESLint security plugins in CI (S11).
+- Document: **route guards = UX**; API/RLS enforces authZ (S9).
 
 ## 4. Design system & Tailwind v4
 
@@ -66,7 +69,40 @@ readonly members = resource({
 - Feature components consume `libs/ui` primitives (dialog, select, table).
 - Enforce min touch targets and `focus-visible` in shared components.
 
-## 5. AI context & CI
+## 5. Testing strategy (v1.2)
+
+**Where:** `libs/ports`, `libs/adapters-*`, `apps/*-e2e`, `.github/workflows/`.
+
+**Testing trophy (target mix):**
+
+| Layer | Tool | What to test |
+|-------|------|----------------|
+| Ports/adapters | Vitest, no TestBed | Domain rules, mappers, contract suite (T4, T8, T11) |
+| Components | Vitest + TestBed | UI with `overrideComponent` + mock adapters (T5) |
+| E2E | Playwright | Critical paths on **mock adapters** for PR CI (T1 L2) |
+
+**Playwright practices:**
+
+- `data-testid` selectors (not `ng-reflect-*`).
+- `storageState` for auth; `--shard` for parallel CI.
+- Tag live-backend suites (`@web`); keep fork PRs mock-only.
+
+**Supply chain (T7, T12):** Dependabot/Renovate with 3-day cooldown; pin GHA to commit SHAs.
+
+## 6. Accessibility & performance (v1.2)
+
+**Where:** `libs/shell`, `libs/ui`, `apps/*-e2e`, global styles.
+
+**Actions:**
+
+- `@axe-core/playwright` on auth, settings, billing, members in CI (P1 L2).
+- `scroll-padding-top` for sticky headers (P11); 24×24px targets on icon buttons (P2).
+- Dialog focus trap + Esc + focus restore (P4) via Spartan/CDK.
+- Toast `aria-live` polite vs assertive (P7).
+- `provideZonelessChangeDetection()` for INP on dense admin UIs (links NG1/NG2).
+- Lighthouse CI on **marketing/landing** only (T9) — not the sole admin metric.
+
+## 7. AI context & CI
 
 **Where:** Repository root, `.github/workflows/`.
 
@@ -90,14 +126,15 @@ readonly members = resource({
 **CI pipeline (minimal):**
 
 1. `nx format:check`
-2. `nx run-many -t lint`
-3. `nx run-many -t test` (where configured)
+2. `nx run-many -t lint` (include security ESLint)
+3. `nx run-many -t test` — enforce ports/adapters coverage on L2 (T8)
 4. `nx build demo`
-5. `nx e2e demo-e2e` (or project name)
+5. `nx e2e demo-e2e` (mock adapters)
+6. axe-playwright on primary flows (L2+)
 
-Optional: OpenSSF Scorecard workflow, Lighthouse CI on Pages deploy.
+Optional: OpenSSF Scorecard, Lighthouse CI on public deploy, nightly `@web` E2E against staging (L3).
 
-## 6. SaaS features
+## 8. SaaS features
 
 | Feature | Port | Typical UI location |
 |---------|------|---------------------|

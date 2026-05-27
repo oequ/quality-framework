@@ -1,18 +1,19 @@
 # Security & privacy
 
-B2B SaaS frontends: XSS prevention, auth storage, CSRF, and clear separation of UI guards vs server authorization.
+B2B SaaS frontends: XSS prevention, session management, ASVS-aligned controls. See [research summary](../research/05-security-summary.md).
 
-| ID | Criterion | Level | Verification | Ports note |
-|----|-----------|-------|--------------|------------|
-| **S1** | **Strict CSP.** Content-Security-Policy restricts `unsafe-inline` / `unsafe-eval` in production. | Must | Headers / deploy config | Demos may use relaxed policy—document. |
-| **S2** | **CSP nonces.** Angular configured for nonces where inline assets are required. | Should | Architecture | Pair with S1 for production. |
-| **S3** | **No `bypassSecurityTrustHtml`.** Banned or strictly reviewed with security justification. | Must | ESLint / CodeQL | User-generated content in SaaS settings. |
-| **S4** | **Trusted Types.** Headers/policy support Trusted Types where feasible. | Could | Headers | Defense in depth for DOM XSS. |
-| **S5** | **Secure token storage.** Production: HttpOnly cookies (or BFF pattern)—not JWT in `localStorage`. | Must | Architecture / docs | Mock demos may use sessionStorage—label as non-production. |
-| **S6** | **CSRF protection.** `withXsrfConfiguration` or equivalent for cookie-based APIs. | Must | TypeScript config | Enable in production HTTP adapters. |
-| **S7** | **Auth interceptor.** Tokens/headers attached centrally—not per adapter ad hoc. | Must | Code review | Single place for auth refresh logic. |
-| **S8** | **No dynamic code execution.** No `eval`, `new Function`, string `setTimeout`. | Must | ESLint | Baseline JS security. |
-| **S9** | **Guards are UX only.** Docs state route guards ≠ authorization; backend/RLS enforces access. | Must | Documentation | Critical for starter credibility. |
-| **S10** | **SSR proxy trust.** If using SSR, trusted proxy configuration documented (SSRF mitigation). | Should | Config | When applicable only. |
+| ID | Criterion | Level | Verification | L1 demo / L2 production notes |
+|----|-----------|-------|--------------|-------------------------------|
+| **S1** | **Strict CSP.** Restricts `unsafe-inline` / `unsafe-eval` in production deployments. | Must | Headers / deploy config | **L1:** HTML `<meta>` CSP allowed if documented demo-only (styles-only `unsafe-inline` max). **L2:** HTTP `Content-Security-Policy` header; no unsafe-inline/eval. **No Partial** for production claims. |
+| **S2** | **CSP nonces with Angular.** `ngCspNonce`, `CSP_NONCE`, or `autoCsp` for inline styles/scripts with strict CSP. | Should | Architecture | **L2 gate:** Pass required. **L3:** per-request nonce at CDN edge (not origin-cached). |
+| **S3** | **No unreviewed `bypassSecurityTrustHtml`.** Banned or security-reviewed; DOMPurify (or equivalent) before rich HTML. | Must | ESLint / CodeQL | **L1 Partial:** isolated, documented bypasses not exposed to user HTML. |
+| **S4** | **Trusted Types.** CSP `require-trusted-types-for 'script'` where feasible; Angular fallback sanitization. | Could | Headers | **L2:** supported as fallback. **L3:** strict enforcement. |
+| **S5** | **Secure token storage.** Production: HttpOnly cookies or BFF — not JWT in `localStorage`. | Must | Architecture / docs | **L1 Partial:** `localStorage`/`sessionStorage` only if labeled **demo/sandbox** + migration path documented. **L2 gate:** Pass requires cookie/BFF config in repo. |
+| **S6** | **CSRF protection.** `withXsrfConfiguration` (or equivalent) for **cookie-based** session APIs. | Must | TypeScript config | Not required for pure `Authorization: Bearer` from memory. **No Partial** if cookies used without CSRF. |
+| **S7** | **Auth interceptor.** Central token attach + refresh; **single-flight** refresh on concurrent 401s. | Must | Code review | No per-adapter ad hoc auth headers. |
+| **S8** | **No dynamic code execution.** No `eval`, `new Function`, string `setTimeout` code. | Must | ESLint | **No Partial.** |
+| **S9** | **Guards are UX only.** Documented: route guards ≠ authorization; backend/RLS/API enforces access. | Must | Documentation + tests | **No Partial.** Cross-tenant negative tests recommended for L3. |
+| **S10** | **SSR trusted proxy.** Trusted proxy / forwarded-header config documented when using SSR. | Should | Config | **L1 N/A** if no SSR. |
+| **S11** | **SAST in CI.** ESLint security plugins (e.g. secure-coding, browser-security) on PRs. | Should | CI | Complements S3/S8; maps to ASVS V1/V3 themes. |
 
 [← Rubric index](./README.md)

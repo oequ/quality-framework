@@ -1,6 +1,6 @@
 # Quality Framework — Standard overview
 
-**Version 1.1** · Angular B2B SaaS frontends (2025–2026)
+**Version 1.2** · Angular B2B SaaS frontends (2025–2026)
 
 ## Executive summary
 
@@ -48,8 +48,8 @@ These themes appear repeatedly across rubric domains. Exact IDs and levels are i
 3. **Injection tokens for ports** — Swap mock vs production adapters in `app.config` only.
 4. **Standalone-first Angular** — No new NgModules; signal `input()` / `output()`; built-in control flow.
 5. **Async data via Resource API** — Prefer `resource()` / `httpResource()` over manual subscribe chains in UI.
-6. **Security baseline** — CSP mindset, no casual `bypassSecurityTrustHtml`, auth tokens not in `localStorage` for production.
-7. **WCAG 2.2 AA targets** — Focus visible, 24×24px targets, accessible auth, toast announcements.
+6. **Security baseline (tiered)** — Demo may use meta CSP + labeled `localStorage`; **L2** requires HTTP CSP (S1), nonces (S2), and cookie/BFF session path (S5).
+7. **WCAG 2.2 AA targets** — Focus visible, focus not obscured (P11), axe CI on primary flows for L2 (P1); VPAT for enterprise procurement.
 8. **AGENTS.md** — Deterministic instructions for humans and AI in monorepos.
 9. **SaaS domain boundaries** — Billing, members, tenancy via ports—not vendor SDKs in components.
 10. **Demo realism** — Mock adapters for local run; production adapter swappable without editing features.
@@ -59,7 +59,9 @@ These themes appear repeatedly across rubric domains. Exact IDs and levels are i
 Some criteria describe **2026 best practice** that teams adopt gradually:
 
 - **Zoneless** (`provideZonelessChangeDetection`, no `zone.js`) — **Must for L2** (v1.1); many L1 starters still migrate.
-- **Full CSP with nonces** — required for L2+ production, often partial in demos.
+- **Full CSP with nonces** — **L2 gates** S1+S2; demos document meta CSP explicitly.
+- **axe in CI on primary flows** — **L2 gate** P1; marketing pages may use Lighthouse (T9).
+- **Mock-only E2E on PR** — **L2** T1; staging smoke with prod adapters is **L3**.
 - **Route-based tenant IDs** — alternative to active-org context + settings routes; pick one model and document it.
 
 Mark these **Should** or document gaps in your self-assessment. Do not claim L2 while running a demo-only auth mock.

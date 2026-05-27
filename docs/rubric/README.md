@@ -26,9 +26,9 @@ Verifiable criteria for Angular B2B SaaS frontends. Each row has a **stable ID**
 | [01-architecture.md](./01-architecture.md) | Ports, adapters, Nx boundaries | A1–A13 |
 | [02-angular.md](./02-angular.md) | Angular 21+ platform | NG1–NG13 |
 | [03-typescript.md](./03-typescript.md) | TypeScript, lint, formatting | TS1–TS11 |
-| [04-testing-ci.md](./04-testing-ci.md) | Tests, CI, supply chain | T1–T11 |
-| [05-security.md](./05-security.md) | CSP, auth, XSS |
-| [06-performance-a11y.md](./06-performance-a11y.md) | WCAG 2.2, performance |
+| [04-testing-ci.md](./04-testing-ci.md) | Tests, CI, supply chain | T1–T14 |
+| [05-security.md](./05-security.md) | CSP, auth, XSS | S1–S11 |
+| [06-performance-a11y.md](./06-performance-a11y.md) | WCAG 2.2, performance | P1–P11 |
 | [07-ux-design-system.md](./07-ux-design-system.md) | UI states, design tokens |
 | [08-documentation-oss.md](./08-documentation-oss.md) | OSS hygiene, AGENTS.md |
 | [09-saas-domain.md](./09-saas-domain.md) | Tenancy, billing, members |
@@ -46,4 +46,4 @@ Many criteria include a **Ports note**—how the rule applies when using hexagon
 
 ## Versioning
 
-This rubric is **Quality Framework v1.1**. Criterion IDs are stable; clarifications and new IDs ship in minor releases (see [evolution.md](../evolution.md) and [CONTRIBUTING.md](../../CONTRIBUTING.md)).
+This rubric is **Quality Framework v1.2**. Criterion IDs are stable; clarifications and new IDs ship in minor releases (see [evolution.md](../evolution.md) and [CONTRIBUTING.md](../../CONTRIBUTING.md)).

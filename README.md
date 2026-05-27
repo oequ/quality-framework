@@ -2,7 +2,7 @@
 
 An open quality standard for **Angular B2B SaaS** frontends (2025–2026): rubric, maturity levels, and adoption guides—not a flat checklist.
 
-**Version:** 1.1.0 (see [CHANGELOG.md](./CHANGELOG.md))
+**Version:** 1.2.0 (see [CHANGELOG.md](./CHANGELOG.md))
 
 ## What this is
 
@@ -43,7 +43,7 @@ Static Markdown checkboxes are easy to tick without matching reality. Quality Fr
 | [docs/scoring.md](./docs/scoring.md) | How to calculate the 0–1000 score |
 | [docs/implementation.md](./docs/implementation.md) | Where to implement in an Nx monorepo |
 | [docs/roadmap.md](./docs/roadmap.md) | 90-day adoption plan |
-| [docs/evolution.md](./docs/evolution.md) | How the framework evolves (v1.1+) |
+| [docs/evolution.md](./docs/evolution.md) | How the framework evolves (v1.2+) |
 | [docs/research/](./docs/research/) | Deep research reports & summaries |
 | [docs/anti-patterns.md](./docs/anti-patterns.md) | Legacy practices to avoid |
 | [docs/bibliography.md](./docs/bibliography.md) | Sources |

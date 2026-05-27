@@ -7,7 +7,7 @@
 | [standard.md](./standard.md) | What Quality Framework is; hybrid model; non-negotiables |
 | [maturity.md](./maturity.md) | L1 / L2 / L3 levels and category weights |
 | [scoring.md](./scoring.md) | How to calculate the 0–1000 score |
-| [evolution.md](./evolution.md) | Framework evolution and research program (v1.1+) |
+| [evolution.md](./evolution.md) | Framework evolution and research program (v1.2+) |
 | [research/](./research/) | Deep research reports and summaries |
 
 ## Rubric (criteria)
@@ -18,9 +18,9 @@
 | [rubric/01-architecture.md](./rubric/01-architecture.md) | Architecture & boundaries | A1–A13 |
 | [rubric/02-angular.md](./rubric/02-angular.md) | Angular platform | NG1–NG13 |
 | [rubric/03-typescript.md](./rubric/03-typescript.md) | TypeScript & code quality | TS1–TS11 |
-| [rubric/04-testing-ci.md](./rubric/04-testing-ci.md) | Testing & CI | T1–T11 |
-| [rubric/05-security.md](./rubric/05-security.md) | Security & privacy | S1–S10 |
-| [rubric/06-performance-a11y.md](./rubric/06-performance-a11y.md) | Performance & accessibility | P1–P10 |
+| [rubric/04-testing-ci.md](./rubric/04-testing-ci.md) | Testing & CI | T1–T14 |
+| [rubric/05-security.md](./rubric/05-security.md) | Security & privacy | S1–S11 |
+| [rubric/06-performance-a11y.md](./rubric/06-performance-a11y.md) | Performance & accessibility | P1–P11 |
 | [rubric/07-ux-design-system.md](./rubric/07-ux-design-system.md) | UX & design system | U1–U10 |
 | [rubric/08-documentation-oss.md](./rubric/08-documentation-oss.md) | Documentation & OSS hygiene | D1–D8 |
 | [rubric/09-saas-domain.md](./rubric/09-saas-domain.md) | SaaS domain | SaaS1–SaaS7 |
