@@ -27,7 +27,7 @@ Quality Framework v1.0 Angular criteria:
 | NG11 | Lazy routes (`loadComponent`) | Must |
 | NG12 | No `markForCheck()` in new code | Should |
 
-Stack: Angular 21, standalone bootstrap, signals widely adopted, zone.js may still be present, Spartan UI, Nx monorepo.
+Example reference stack: Angular 21, standalone bootstrap, signals widely adopted, zone.js may still be present, headless UI library, Nx monorepo.
 
 ## Research questions
 

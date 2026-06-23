@@ -22,7 +22,7 @@ Quality Framework v1.0 SaaS domain criteria:
 | SaaS6 | Members lifecycle (invite, remove, change role) | Must |
 | SaaS7 | RBAC in UI (admin actions hidden/disabled by role) | Must |
 
-Our starter implements: workspace switcher, active-org context (not URL `:orgId`), BillingPort with mock + Stripe, seat limits, onboarding/activation, members UI, admin guards, Supabase RLS.
+Example reference implementation: workspace switcher, active-org context (not URL `:orgId`), BillingPort with mock + Stripe, seat limits, onboarding/activation, members UI, admin guards, Supabase RLS.
 
 ## Research questions
 

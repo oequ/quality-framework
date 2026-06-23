@@ -10,6 +10,8 @@ Verifiable criteria for Angular B2B SaaS frontends. Each row has a **stable ID**
 | **Should** | Expected when shipping a production fork (L2) |
 | **Could** | Exemplary; differentiator for L3 |
 
+Optional [Quality Profiles](../profiles/README.md) define additional criteria for specialized product shapes such as AI-native SaaS. Profiles do not change the core 0-1000 score.
+
 ## Verification types
 
 | Method | Description |

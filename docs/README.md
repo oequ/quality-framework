@@ -13,6 +13,7 @@
 | [migration/v1.0-to-v1.3.md](./migration/v1.0-to-v1.3.md) | Upgrade guide from v1.0 |
 | [procurement-appendix.md](./procurement-appendix.md) | Buyer mapping (informative) |
 | [rfc/README.md](./rfc/README.md) | v2.0 RFC candidates |
+| [profiles/](./profiles/README.md) | Optional quality profiles for specialized product shapes |
 
 ## Rubric (criteria)
 
@@ -28,6 +29,17 @@
 | [rubric/07-ux-design-system.md](./rubric/07-ux-design-system.md) | UX & design system | U1–U13 |
 | [rubric/08-documentation-oss.md](./rubric/08-documentation-oss.md) | Documentation & OSS hygiene | D1–D10 |
 | [rubric/09-saas-domain.md](./rubric/09-saas-domain.md) | SaaS domain | SaaS1–SaaS12 |
+
+## Optional profiles
+
+| Document | Profile | IDs |
+|----------|---------|-----|
+| [profiles/README.md](./profiles/README.md) | Profile model and badge guidance | — |
+| [profiles/developer-platform.md](./profiles/developer-platform.md) | Developer Platform / API-ready | DP1–DP8 |
+| [profiles/ai-native.md](./profiles/ai-native.md) | AI-native SaaS profile overview | AI1–AI12 |
+| [profiles/ai-cost-safe.md](./profiles/ai-cost-safe.md) | AI-Native: Cost-safe | AI1–AI5 |
+| [profiles/ai-agent-ready.md](./profiles/ai-agent-ready.md) | AI-Native: Agent-ready | AI8–AI12 |
+| [profiles/ai-compliance-ready.md](./profiles/ai-compliance-ready.md) | AI-Native: Compliance-ready | AI6–AI7 |
 
 ## Adoption
 

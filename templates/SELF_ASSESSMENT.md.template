@@ -11,6 +11,7 @@ Assessment of **this repository** against [Quality Framework v1.4](https://githu
 | **Total score** | ___ / 1000 |
 | **Maturity level** | L1 / L2 / L3 (self-assessed) |
 | **Must gates** | Architecture / Security / Angular — all Must = Pass for L1 badge |
+| **Optional profiles** | e.g. Developer Platform: API-ready / AI-Native: Cost-safe / Agent-ready / Compliance-ready / N/A |
 
 ## Summary
 
@@ -32,6 +33,8 @@ Short narrative: strengths, known gaps, demo vs production caveats.
 | Documentation & OSS | 50 | | |
 
 Scoring method: [docs/scoring.md](https://github.com/oequ/quality-framework/blob/main/docs/scoring.md)
+
+Optional profiles are additive and do not change the base 0–1000 score. See [docs/profiles](https://github.com/oequ/quality-framework/tree/main/docs/profiles).
 
 ## Must criteria — Architecture, Security, Angular
 
@@ -76,12 +79,30 @@ Full rubric: [docs/rubric](https://github.com/oequ/quality-framework/tree/main/d
 - E2E: LINK_OR_STATUS
 - Build: LINK_OR_STATUS
 
+## Optional profile evidence
+
+Fill only if the product claims an optional profile badge.
+
+| Profile | Criteria | Status | Evidence |
+|---------|----------|--------|----------|
+| Developer Platform: API-ready | DP1–DP8 | Pass / Partial / Fail / N/A | |
+| AI-Native: Cost-safe | AI1, AI2, AI3 | Pass / Partial / Fail / N/A | |
+| AI-Native: Agent-ready | AI8, AI9, AI10, AI11, AI12 | Pass / Partial / Fail / N/A | |
+| AI-Native: Compliance-ready | AI6, AI7 | Pass / Partial / Fail / N/A | |
+
 ## Badge
 
 If publishing a README badge, use only the level supported by this document:
 
 ```markdown
 [![Quality Framework: L1 Starter-ready](https://img.shields.io/badge/Quality_Framework-L1_Starter--ready-0ea5e9)](https://github.com/oequ/quality-framework)
+```
+
+Optional profile badges require profile evidence above:
+
+```markdown
+[![Developer Platform Profile: API-ready](https://img.shields.io/badge/Developer_Platform-API--ready-0284c7)](https://github.com/oequ/quality-framework/blob/main/docs/profiles/developer-platform.md)
+[![AI-Native Profile: Cost-safe](https://img.shields.io/badge/AI--Native-Cost--safe-7c3aed)](https://github.com/oequ/quality-framework/blob/main/docs/profiles/ai-cost-safe.md)
 ```
 
 ## Next actions

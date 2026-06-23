@@ -14,6 +14,8 @@ Quality Framework helps teams and OSS maintainers answer:
 
 It targets apps built with **Angular 21+**, **Nx**, **ports & adapters**, design systems (e.g. Spartan + Tailwind v4), and SaaS domains: **multi-tenant workspaces**, **billing**, **members**, **RBAC**.
 
+Optional [Quality Profiles](./docs/profiles/README.md) extend the core rubric for specialized product shapes such as API-first SaaS and AI-native SaaS without changing the base 0-1000 score.
+
 ## Why not just a checklist?
 
 Static Markdown checkboxes are easy to tick without matching reality. Quality Framework uses a **hybrid model**:
@@ -48,6 +50,7 @@ Static Markdown checkboxes are easy to tick without matching reality. Quality Fr
 | [docs/implementation.md](./docs/implementation.md) | Where to implement in an Nx monorepo |
 | [docs/roadmap.md](./docs/roadmap.md) | 90-day adoption plan |
 | [docs/evolution.md](./docs/evolution.md) | How the framework evolves (v1.4+) |
+| [docs/profiles/](./docs/profiles/README.md) | Optional profiles such as Developer Platform API-ready and AI-Native Cost-safe / Agent-ready / Compliance-ready |
 | [docs/research/](./docs/research/) | Deep research reports & summaries |
 | [docs/anti-patterns.md](./docs/anti-patterns.md) | Legacy practices to avoid |
 | [docs/bibliography.md](./docs/bibliography.md) | Sources |
@@ -70,6 +73,15 @@ Optional README badge (replace level when you publish a self-assessment):
 ```
 
 Only claim **L2** or **L3** after meeting [docs/l2-gates.md](./docs/l2-gates.md) and [docs/maturity.md](./docs/maturity.md), with evidence in `docs/QUALITY.md`.
+
+Optional profile badges are additive. For example:
+
+```markdown
+[![Developer Platform Profile: API-ready](https://img.shields.io/badge/Developer_Platform-API--ready-0284c7)](https://github.com/oequ/quality-framework/blob/main/docs/profiles/developer-platform.md)
+[![AI-Native Profile: Cost-safe](https://img.shields.io/badge/AI--Native-Cost--safe-7c3aed)](https://github.com/oequ/quality-framework/blob/main/docs/profiles/ai-cost-safe.md)
+```
+
+Only claim a profile badge after meeting the profile gates with evidence in `docs/QUALITY.md`.
 
 ## Contributing
 

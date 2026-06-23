@@ -25,7 +25,7 @@ Quality Framework v1.0 Security criteria:
 | S9 | Route guards documented as UX-only; backend enforces auth | Must |
 | S10 | SSR trusted proxy config (when applicable) | Should |
 
-Our starter: Angular SPA, Supabase Auth (JWT in localStorage by default), meta-tag CSP with `unsafe-inline`, RLS on backend, demo labeled non-production for token storage.
+Example reference implementation: Angular SPA, Supabase Auth (JWT in localStorage by default), meta-tag CSP with `unsafe-inline`, RLS on backend, demo labeled non-production for token storage.
 
 ## Research questions
 

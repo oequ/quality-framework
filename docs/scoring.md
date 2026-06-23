@@ -21,6 +21,8 @@ For each **category** (see [maturity.md](./maturity.md)):
 
 **Total score** = sum of category points (max 1000).
 
+Optional [Quality Profiles](./profiles/README.md) are scored separately from the base 0-1000 total. Profile criteria may be Pass / Partial / Fail / N/A, but they do not add points to the core score.
+
 ## Worked example (illustrative)
 
 Architecture category (max 200). Suppose 8 Must × 1.0 + 4 Should × 0.5 = 10.0 possible weight units.
@@ -51,6 +53,8 @@ Repeat for all categories, then sum.
 
 **Rubric criteria last changed in v1.3** (SaaS8–12, U11–13, D9–10). v1.4 added documentation only.
 
+**Optional profile criteria:** Draft profile IDs such as `DP1`–`DP8` and `AI1`–`AI12` are additive evidence tracks. Do not mix profile points into the 0-1000 core score unless a future major release changes the scoring model.
+
 ## Publishing results
 
 In your repo’s `docs/QUALITY.md` (from template):
@@ -70,5 +74,6 @@ In your repo’s `docs/QUALITY.md` (from template):
 - Do not count **Partial** as Pass for badge eligibility.
 - Mark demo-only auth/storage as **Fail** for production Must security criteria, with note “demo exception.”
 - Pin rubric version when you assess; use [l2-gates.md](./l2-gates.md) for L2 claims.
+- Pin profile version/status separately when claiming optional profile badges.
 
 [← Maturity model](./maturity.md)

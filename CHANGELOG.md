@@ -4,6 +4,35 @@ All notable changes to Quality Framework documentation are documented here.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [Unreleased]
+
+### Added
+
+- [docs/profiles/README.md](./docs/profiles/README.md) — optional Quality Profiles model and badge guidance.
+- [docs/profiles/developer-platform.md](./docs/profiles/developer-platform.md) — draft Developer Platform / API-ready profile criteria `DP1`–`DP8`.
+- [docs/profiles/ai-native.md](./docs/profiles/ai-native.md) — draft AI-native SaaS profile criteria `AI1`–`AI12`.
+- [docs/profiles/ai-cost-safe.md](./docs/profiles/ai-cost-safe.md) — draft cost-safety badge gates for AI credit lifecycle, spend caps, and idempotency.
+- [docs/profiles/ai-agent-ready.md](./docs/profiles/ai-agent-ready.md) — draft agent-runtime badge gates for scoped tools, approvals, workflow spec validation, and sandboxed execution.
+- [docs/profiles/ai-compliance-ready.md](./docs/profiles/ai-compliance-ready.md) — draft generated-content disclosure and provenance badge guidance.
+- [docs/research/10-ai-native-summary.md](./docs/research/10-ai-native-summary.md) — reviewed summary of AI-native SaaS / agent runtime research.
+- [docs/research/11-developer-platform-summary.md](./docs/research/11-developer-platform-summary.md) — reviewed summary of Developer Platform / API Console research.
+- [docs/research/12-security-platform-refresh-summary.md](./docs/research/12-security-platform-refresh-summary.md) — reviewed summary of June 2026 security/platform refresh research.
+- [docs/research/13-synthesis-versioning-summary.md](./docs/research/13-synthesis-versioning-summary.md) — reviewed synthesis for the v1.5 additive profile track and v2.0 RFC roadmap.
+- [docs/rfc/RFC-007-platform-security-refresh-2026.md](./docs/rfc/RFC-007-platform-security-refresh-2026.md) — RFC candidate for Supabase grants/views, MCP/STDIO safety, generated-code drift, Scorecard, and Angular/Vitest gate review.
+
+### Changed
+
+- [docs/maturity.md](./docs/maturity.md) and [docs/scoring.md](./docs/scoring.md) now document that optional profiles are additive and do not change the base 0-1000 score.
+- [docs/evolution.md](./docs/evolution.md) now tracks optional profiles as the draft v1.5 direction.
+- README and documentation indexes now link to profiles.
+
+### Notes
+
+- No core rubric category weights changed.
+- No existing core criterion IDs were renamed or removed.
+- Developer Platform and AI profile criteria remain draft v1.5 candidates after synthesis; core scoring is unchanged.
+- Security/platform refresh changes are documented as RFC candidates; no existing stable criterion IDs were renamed.
+
 ## [1.4.0] - 2026-05-27
 
 ### Added

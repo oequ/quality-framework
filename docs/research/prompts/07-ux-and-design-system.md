@@ -25,7 +25,7 @@ Quality Framework v1.0 UX & design system criteria:
 | U9 | Design tokens (CSS variables / theme) | Must |
 | U10 | Demo realism (product-grade, not wireframe) | Should |
 
-Stack: Tailwind v4, Spartan-ng (brain + helm), oklch CSS variables, mock data with realistic org names, skeleton components, Sonner toasts.
+Example reference stack: Tailwind v4, headless UI primitives (brain + helm pattern), oklch CSS variables, mock data with realistic org names, skeleton components, toast notifications.
 
 ## Research questions
 

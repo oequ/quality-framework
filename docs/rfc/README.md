@@ -14,6 +14,7 @@ Synthesis source: [00-synthesis-2026-summary.md](../research/00-synthesis-2026-s
 | **RFC-004** | Core L2 vs full L2 badge | Optional second badge for subset of gates | Yes (maturity model) |
 | **RFC-005** | FSD Nx tags | Optional `type:entity`, `type:widget` in implementation guide | Maybe |
 | **RFC-006** | Normative procurement appendix | Promote [procurement-appendix.md](../procurement-appendix.md) to maintained buyer kit | No |
+| **RFC-007** | [2026 platform and supply-chain security refresh](./RFC-007-platform-security-refresh-2026.md) | Supabase grants/views, MCP/STDIO safety, generated-code drift, Scorecard and Angular/Vitest gates | Yes (if adopted as gates) |
 
 ## Process
 

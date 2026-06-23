@@ -10,7 +10,7 @@ You are a principal engineer and product strategist specializing in **Angular B2
 
 ## Context
 
-We maintain **Quality Framework v1.3** — a weighted rubric (0–1000) for evaluating OSS Angular SaaS starters. Maturity levels:
+**Quality Framework v1.3** is a weighted rubric (0–1000) for evaluating OSS Angular SaaS starters. Maturity levels:
 
 - **L1 Starter-ready** (>600): credible OSS fork; mock adapters OK; honest gaps in `docs/QUALITY.md`
 - **L2 Production-ready** (>800): score plus **all L2 gates** (see [maturity.md](../../maturity.md))

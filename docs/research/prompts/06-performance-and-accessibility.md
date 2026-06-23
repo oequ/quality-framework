@@ -25,7 +25,7 @@ Quality Framework v1.0 Performance & a11y criteria:
 | P9 | Lazy loading images | Should |
 | P10 | Drag-and-drop keyboard alternatives | Should |
 
-Stack: Angular 21, Spartan/CDK dialogs, Sonner toasts, data tables for members/emails, Chart.js metrics, Tailwind v4.
+Example reference stack: Angular 21, headless/CDK dialogs, toast notifications, data tables for members/emails, chart library, Tailwind v4.
 
 ## Research questions
 

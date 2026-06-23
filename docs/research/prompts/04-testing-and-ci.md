@@ -25,7 +25,7 @@ Quality Framework v1.0 Testing & CI criteria:
 | T9 | Lighthouse CI | Could |
 | T10 | Parallel CI jobs (lint, test, build, e2e) | Must |
 
-Our stack: GitHub Actions, Nx 22, Vitest for ports, Playwright for demo + web (@web tag with Supabase), Dependabot configured, parallel jobs.
+Example reference stack: GitHub Actions, Nx 22, Vitest for ports, Playwright for demo + web (optional Supabase-backed E2E tag), Dependabot configured, parallel jobs.
 
 ## Research questions
 

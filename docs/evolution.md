@@ -12,6 +12,8 @@ Quality Framework is a **living standard**, not a frozen PDF. It evolves when:
 
 Versions **1.1–1.3** (May 2026) incorporated deep research across all nine rubric domains. **v1.4** closes the research loop with [synthesis](./research/00-synthesis-2026-summary.md) and adopter docs ([l2-gates.md](./l2-gates.md), [migration](./migration/v1.0-to-v1.3.md), [procurement appendix](./procurement-appendix.md)).
 
+After June 2026 research, Quality Framework is exploring **optional profiles** for product shapes that exceed the base Angular B2B SaaS rubric, starting with [Developer Platform](./profiles/developer-platform.md) and [AI-Native](./profiles/ai-native.md). Profiles are additive and do not change the base 0-1000 score in v1.x.
+
 ## Governance model
 
 ```text
@@ -42,6 +44,7 @@ Major release (2.0) — reweight categories or break scoring
 | Activity | Frequency | Output |
 |----------|-----------|--------|
 | Domain deep research | 1–2 domains / quarter | Report in `docs/research/` |
+| Profile deep research | As needed for specialized product shapes | Draft in `docs/profiles/` + summary in `docs/research/` |
 | Rubric sync | After each research batch | Minor release if warranted |
 | Reference app re-score | Each minor release | Updated self-assessment in reference repos |
 | Synthesis | After 3+ domain reports | Update [evolution.md](./evolution.md) priorities |
@@ -68,8 +71,29 @@ Major release (2.0) — reweight categories or break scoring
 | Documentation & OSS | [08 summary](./research/08-documentation-oss-summary.md) |
 | SaaS domain | [09 summary](./research/09-saas-domain-summary.md) |
 | **Synthesis** | [00 summary](./research/00-synthesis-2026-summary.md) |
+| Developer Platform / API Console | [11 summary](./research/11-developer-platform-summary.md) |
+| AI-Native SaaS / Agent Runtime | [10 summary](./research/10-ai-native-summary.md) |
+| Security / Platform Refresh 2026 | [12 summary](./research/12-security-platform-refresh-summary.md) |
+| **2026 refresh synthesis** | [13 summary](./research/13-synthesis-versioning-summary.md) |
 
-**Research program:** maintenance mode. New domain research only via approved [RFC](./rfc/README.md) or major community demand. Routine changes: GitHub issues (`rubric-feedback`), patch/minor doc fixes.
+**Research program:** maintenance mode for the core rubric. New core domain research should go through an approved [RFC](./rfc/README.md) or major community demand. Optional profiles may be drafted as v1.x candidates when they do not change core scoring.
+
+## v1.5 candidate direction
+
+Draft v1.5 work introduces optional Quality Profiles:
+
+- [profiles/README.md](./profiles/README.md) — profile model and badge guidance.
+- [profiles/developer-platform.md](./profiles/developer-platform.md) — Developer Platform / API-ready criteria `DP1`–`DP8`.
+- [profiles/ai-native.md](./profiles/ai-native.md) — AI-native SaaS criteria `AI1`–`AI12`.
+- [profiles/ai-cost-safe.md](./profiles/ai-cost-safe.md) — AI credit ledger, spend caps, idempotency.
+- [profiles/ai-agent-ready.md](./profiles/ai-agent-ready.md) — workflow spec validation, scoped tools, approvals, safe execution.
+- [profiles/ai-compliance-ready.md](./profiles/ai-compliance-ready.md) — generated-content disclosure and provenance.
+
+This is intentionally not a core-score change. It lets AI-native products publish evidence without forcing non-AI Angular SaaS starters to satisfy irrelevant criteria.
+
+Security/platform refresh work is tracked separately in [RFC-007](./rfc/RFC-007-platform-security-refresh-2026.md). It may lead to v1.5 documentation clarifications and v2.0 gate changes, but breaking changes must stay on the RFC track.
+
+The reviewed 2026 synthesis is [13-synthesis-versioning-summary.md](./research/13-synthesis-versioning-summary.md). It recommends a staged path: v1.5 should stay additive and backward-compatible, while core scoring changes, maturity renames, Enterprise profile work, and mandatory platform modernization should remain v2.0 RFC candidates.
 
 ## v1.4 changes (summary)
 
@@ -158,7 +182,7 @@ Major release (2.0) — reweight categories or break scoring
 
 ## Long-term directions (v2.0)
 
-Track in [rfc/README.md](./rfc/README.md). Themes include category weight review, S1a/S1b split, SaaS2 L2 gate, core L2 badge, FSD tags, normative procurement kit.
+Track in [rfc/README.md](./rfc/README.md). Themes include category weight review, S1a/S1b split, SaaS2 L2 gate, core L2 badge, FSD tags, normative procurement kit, and the 2026 platform/security refresh.
 
 ## Contributing rubric changes
 

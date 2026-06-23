@@ -4,6 +4,8 @@ Quality Framework uses a **weighted score** (0–1000) and three **maturity leve
 
 **Rubric version:** Quality Framework v1.4
 
+Optional [Quality Profiles](./profiles/README.md) sit on top of the core maturity model. They do not change the base 0-1000 score unless a future major version explicitly reweights the framework.
+
 ## Category weights
 
 | Category | Weight | Max points |
@@ -75,6 +77,19 @@ Suitable for publishing an OSS UI starter. Does not imply enterprise security or
 | **Requirements** | OpenSSF Scorecard ≥ 8.5; ADRs; broad **Should** coverage; **T1** staging smoke with production adapters; strict **S4** Trusted Types where feasible; independent a11y audit / VPAT |
 
 **Badge label:** `L3 Exemplary`
+
+## Optional profile badges
+
+Profiles express specialized capability beyond the base score:
+
+| Profile badge | Meaning |
+|---------------|---------|
+| `Developer Platform Profile: API-ready` | Public APIs have safe keys, stable contracts, rate limits, tenant isolation, and developer onboarding evidence. |
+| `AI-Native Profile: Cost-safe` | AI work is protected by credit lifecycle, spend caps, idempotency, and cost evidence. |
+| `AI-Native Profile: Agent-ready` | Agentic workflows have scoped tools, approvals, spec validation, and safe execution boundaries. |
+| `AI-Native Profile: Compliance-ready` | Generated or modified content has disclosure and provenance evidence appropriate to the product. |
+
+Profile badges require their own gates and evidence in `docs/QUALITY.md`. A project can be L2 Production-ready without any AI profile if it is not an AI-native product.
 
 ## What not to claim
 

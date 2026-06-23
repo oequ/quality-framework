@@ -35,6 +35,23 @@ Security → Architecture → Angular → SaaS domain → Testing/CI
 
 Security and Architecture first — they gate L1 credibility for B2B buyers.
 
+## 2026 Refresh Prompts
+
+Use these when evolving Quality Framework beyond v1.4 for API-first SaaS, AI-native SaaS, agent runtimes, and June 2026 platform/security changes.
+
+| File | Focus | Expected output |
+|------|-------|-----------------|
+| [2026-refresh/10-developer-platform-api-console.md](./2026-refresh/10-developer-platform-api-console.md) | Developer console, public API, API keys, usage, rate limits, webhooks, audit | `10-developer-platform.md` or optional API-ready profile |
+| [2026-refresh/11-ai-native-saas-agent-runtime.md](./2026-refresh/11-ai-native-saas-agent-runtime.md) | AI credits, async runs, provider cost, compliance, agent workflow runtime | AI-native appendix/profile criteria |
+| [2026-refresh/12-security-platform-refresh-2026.md](./2026-refresh/12-security-platform-refresh-2026.md) | Nx/MCP/Supabase/Angular 22/security updates | Updates to existing domains and gates |
+| [2026-refresh/99-synthesis-versioning-plan.md](./2026-refresh/99-synthesis-versioning-plan.md) | Synthesis after the first three reports | v1.5 vs v2.0 plan, profiles, scoring, roadmap |
+
+Recommended order:
+
+```text
+Developer Platform → AI-Native SaaS → Security/Platform Refresh → Synthesis
+```
+
 ## What to do with results
 
 - Compare findings to a reference app’s self-assessment ([SELF_ASSESSMENT template](../../../templates/SELF_ASSESSMENT.md.template)).

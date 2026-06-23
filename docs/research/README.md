@@ -7,6 +7,7 @@ Deep-research outputs used to evolve Quality Framework. Raw `.txt` exports are g
 | Report | Summary |
 |--------|---------|
 | Cross-domain 2026 expectations | [00-synthesis-2026-summary.md](./00-synthesis-2026-summary.md) |
+| 2026 refresh versioning | [13-synthesis-versioning-summary.md](./13-synthesis-versioning-summary.md) |
 
 ## Domain reports
 
@@ -21,6 +22,9 @@ Deep-research outputs used to evolve Quality Framework. Raw `.txt` exports are g
 | SaaS domain | [Multi-Tenancy, Billing….txt](./A%20Technical%20Blueprint%20for%20Multi-Tenancy%2C%20Billing%20Abstractions%2C%20and%20Fine-Grained%20Authorization%20in%202026.txt) | [09-saas-domain-summary.md](./09-saas-domain-summary.md) | SaaS5 Must, SaaS8–12 |
 | UX & design system | [Modern B2B Admin UX….txt](./Modern%20B2B%20Admin%20UX%20and%20Design%20System%20Architecture.txt) | [07-ux-design-system-summary.md](./07-ux-design-system-summary.md) | U11, U12–U13 |
 | Documentation & OSS | [AI-Assisted Architecture….txt](./A%20Comprehensive%20Framework%20for%20AI-Assisted%20Architecture%2C%20Security%2C%20and%20Governance%20Compliance.txt) | [08-documentation-oss-summary.md](./08-documentation-oss-summary.md) | D9–D10, D3 L2 gate |
+| Developer Platform / API Console | Reviewed summary only | [11-developer-platform-summary.md](./11-developer-platform-summary.md) | Optional profile DP1–DP8 |
+| AI-Native SaaS / Agent Runtime | Reviewed summary only | [10-ai-native-summary.md](./10-ai-native-summary.md) | Optional profiles AI1–AI12 |
+| Security / Platform Refresh 2026 | Reviewed summary only | [12-security-platform-refresh-summary.md](./12-security-platform-refresh-summary.md) | Existing-domain updates + RFC-007 |
 
 ## How to add research
 
@@ -32,5 +36,7 @@ Deep-research outputs used to evolve Quality Framework. Raw `.txt` exports are g
 ## Prompt templates
 
 Reusable Gemini Deep Research prompts: [prompts/](./prompts/README.md) (one file per rubric domain + synthesis).
+
+2026 refresh prompts for Developer Platform, AI-native SaaS, platform/security updates, and versioning synthesis: [prompts/2026-refresh/](./prompts/2026-refresh/README.md).
 
 [← Documentation index](../README.md)

@@ -27,7 +27,7 @@ We evaluate OSS Angular SaaS starters using **Quality Framework v1.0**. Architec
 | A11 | Feature-sliced libraries (`features-auth`, `features-org`) | Must |
 | A12 | Design system boundary (`libs/ui`) | Must |
 
-Our starter uses: Nx 22, Angular 21, `libs/ports`, `libs/adapters-mock`, `libs/data-access-supabase`, `libs/shell`, `libs/features-*`, Spartan UI sublibs.
+Example reference stack (typical Nx Angular SaaS starter): Nx 22, Angular 21, `libs/ports`, `libs/adapters-mock`, `libs/data-access-supabase`, `libs/shell`, `libs/features-*`, headless UI sublibs.
 
 **Known tension:** ports currently import `InjectionToken` from `@angular/core` and `Observable` from `rxjs` — fails strict A1 but is common in Angular hexagonal setups.
 
